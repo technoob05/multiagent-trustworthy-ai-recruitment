@@ -1,0 +1,21 @@
+# TheFangs AI Recruitment
+
+> Official public page for TheFangs research group recruitment at the Faculty of Information Technology, University of Science, VNU-HCM.
+
+## About
+
+- TheFangs currently has 5 members and plans to recruit 5 additional members.
+- The group works primarily online and offers research mentoring. GPU support depends on project needs and available resources.
+- Research topics include multi-agent AI, foundation model alignment, trustworthy machine learning, continual learning, online learning, and computer vision.
+- Long-term pathways may include PhD preparation or industrial R&D. Participation does not guarantee admission, a scholarship, or employment.
+
+## Recruitment process
+
+- Applicants submit a CV and a short introduction.
+- The proposed process includes a basic AI assessment, a structured interview about projects and collaboration, and a short research proposal.
+- Current audience, deadline, and application URL will be posted after the group confirms them.
+
+## Links
+
+- [Recruitment page](https://thefangs-ai-recruitment.boxycoral4.chatgpt.site/)
+- [Contact email](mailto:23122041@student.hcmus.edu.vn)
