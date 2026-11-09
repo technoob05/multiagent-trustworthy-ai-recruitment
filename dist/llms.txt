@@ -32,9 +32,9 @@
 3. **Round 3 - Structured Research & Culture Interview:** 35-45 minute conversational interview about course projects, problem-solving mindset, collaborative dynamics, and research goals.
 4. **Round 4 - Mini Research Proposal:** Maximum 2-page PDF proposal on a given real-world question (~3 hours effort within a 5-day window). No model training or empirical results required. The focus is on problem formulation and sound experimental design. The round concludes with a 10-minute presentation and a 10-minute question-and-answer session.
 
-## Official Links
+## Links and Contacts
 
-- Website: https://technoob05.github.io/multiagent-trustworthy-ai-recruitment/.
-- Application: https://docs.google.com/forms/d/1w_Xi0H-PpbrHX8kz4wdaWaZwPtg9k6QitK-RzBbMNVY/viewform.
-- Email: 23122041@student.hcmus.edu.vn.
-- Address: 227 Nguyen Van Cu, District 5, Ho Chi Minh City.
+- [Recruitment Landing Page](https://technoob05.github.io/multiagent-trustworthy-ai-recruitment/): Official portal.
+- [Application Submission Form](https://docs.google.com/forms/d/1w_Xi0H-PpbrHX8kz4wdaWaZwPtg9k6QitK-RzBbMNVY/viewform): Online form.
+- Contact email: 23122041@student.hcmus.edu.vn.
+- Faculty address: 227 Nguyen Van Cu, District 5, Ho Chi Minh City.
