@@ -7,7 +7,7 @@
 - **Institution:** Faculty of Information Technology, University of Science, Vietnam National University Ho Chi Minh City (FIT, HCMUS).
 - **Head of Lab:** Prof. Long Tran-Thanh (Professor of AI, University of Warwick, UK, and Adjunct Professor at FIT, HCMUS).
 - **Faculty Mentors:** Assoc. Prof. Nguyen Van Vu, Dr. Chau Thanh Duc, Dr. Le Trung Hoang.
-- **Student Mentors:** Dao Sy Duy Minh (co-author of 5 accepted papers at NeurIPS 2026, including 2 co-first author papers) and the senior student core team.
+- **Student Team:** Senior undergraduate research team at FIT, HCMUS.
 - **Current Opening:** Recruiting 5 passionate undergraduate/graduate students to join the current cohort of 5 student researchers.
 - **Work Mode:** Online-first, flexible scheduling around academic courses, weekly 1-on-1 and lab-wide sync meetings.
 - **Compute Resources:** GPU compute cluster access supported for verified research projects.
@@ -17,6 +17,16 @@
 1. **Multi-Agent Systems & Game-Theoretic AI:** Multi-agent reinforcement learning (MARL), algorithmic game theory, strategic coordination, negotiation, and LLM-based agent societies. Target venues: NeurIPS, ICML, ICLR, AAMAS.
 2. **Culture-Aware & Trustworthy Foundation Model Alignment:** Aligning large language and vision-language models with diverse cultural, ethical, and safety norms. Topics include steering black-box models via APIs and defending against jailbreaks. Target venues: NeurIPS, ICML, ACL, EMNLP, TACL.
 3. **Continual Learning & Reliable Computer Vision:** Mitigating catastrophic forgetting in open-world settings, online learning algorithms, and reliable visual recognition under real-world distribution shifts. Target venues: NeurIPS, CVPR, ICCV, ECCV.
+
+## Key Publications and International Recognition
+
+- **Training-Free Cultural Alignment of Large Language Models via Persona Disagreement** (NeurIPS 2026 Main Track, [arXiv:2605.10843](https://arxiv.org/abs/2605.10843)).
+- **Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery** (NeurIPS 2026 Main Track, [arXiv:2605.11654](https://arxiv.org/abs/2605.11654)).
+- **Payoff Scaling Shapes Cooperation in LLM Agents Across Languages** (Royal Society Interface Focus, [arXiv:2601.19082](https://arxiv.org/abs/2601.19082)).
+- **The Mouse vs. AI Robust Foraging Competition** (1st Place Champion across both tracks, NeurIPS 2025 Competition Track; Team HCMUS_TheFangs, technical report [arXiv:2602.00982](https://arxiv.org/abs/2602.00982), competition site: [https://mouse-vs-ai.github.io/](https://mouse-vs-ai.github.io/)).
+- **Unlocking Compositional Generalization in Continual Few-Shot Learning** (NeurIPS 2026 Main Track).
+- **MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound** (NeurIPS 2026 Main Track).
+- **Visual Robustness and Neural Alignment in a Shared Foraging Task: The Mouse vs. AI Benchmark** (NeurIPS 2026 Datasets and Benchmarks Track).
 
 ## What You Will Gain
 

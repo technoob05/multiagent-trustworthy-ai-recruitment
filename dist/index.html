@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Phòng thí nghiệm Trí tuệ nhân tạo đa tác tử và Tin cậy (Multi-Agent & Trustworthy AI Lab) - Khoa CNTT, Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM tuyển thành viên nghiên cứu AI.">
-  <meta name="keywords" content="Multi-Agent AI, Trustworthy AI, HCMUS, FIT HCMUS, AI Research, NeurIPS, Tuyen thanh vien Lab, Tran Thanh Long, Dao Sy Duy Minh">
+  <meta name="keywords" content="Multi-Agent AI, Trustworthy AI, HCMUS, FIT HCMUS, AI Research, NeurIPS, Tuyen thanh vien Lab, Tran Thanh Long">
   <meta name="author" content="Multi-Agent & Trustworthy AI Laboratory">
 
   <!-- Open Graph / Facebook -->
@@ -631,6 +631,111 @@
       line-height: 1.4;
     }
 
+    /* Publications Grid */
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .pub-card {
+      background: var(--surface-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .pub-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .pub-card-award {
+      border-color: var(--primary);
+      background: linear-gradient(to bottom right, var(--surface-card), var(--surface-2));
+    }
+    .pub-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      gap: 8px;
+    }
+    .pub-tag {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      padding: 3px 9px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+    }
+    .pub-tag-journal {
+      background: #eef2fa;
+      color: #1a428a;
+      border-color: #cbdcf8;
+    }
+    [data-theme="dark"] .pub-tag-journal {
+      background: #152642;
+      color: #9cc2ff;
+      border-color: #243d66;
+    }
+    .pub-tag-award {
+      background: #fdf5d6;
+      color: #7a5806;
+      border-color: #f0de9e;
+    }
+    [data-theme="dark"] .pub-tag-award {
+      background: #332608;
+      color: #fad87a;
+      border-color: #5c450f;
+    }
+    .pub-year {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      font-family: var(--font-mono, monospace);
+    }
+    .pub-title {
+      font-size: 16px;
+      line-height: 1.45;
+      font-weight: 750;
+      margin: 0 0 10px;
+      color: var(--ink);
+      letter-spacing: -0.015em;
+    }
+    .pub-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--ink-secondary);
+      margin: 0 0 16px;
+      flex-grow: 1;
+    }
+    .pub-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 12px;
+      border-top: 1px solid var(--line-subtle);
+    }
+    .pub-link {
+      font-size: 13px;
+      font-weight: 650;
+      color: var(--primary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .pub-link:hover {
+      text-decoration: underline;
+    }
+
     /* Benefits Grid */
     .benefits-grid {
       display: grid;
@@ -1014,7 +1119,7 @@
         grid-template-columns: 1fr;
         gap: 16px;
       }
-      .research-grid, .benefits-grid {
+      .research-grid, .benefits-grid, .pub-grid {
         grid-template-columns: 1fr;
       }
       .steps-grid {
@@ -1072,6 +1177,7 @@
       <div class="navlinks">
         <a href="#about">Về Lab</a>
         <a href="#research">Hướng nghiên cứu</a>
+        <a href="#publications">Công bố &amp; Giải thưởng</a>
         <a href="#benefits">Quyền lợi</a>
         <a href="#process">Quy trình</a>
         <a href="#quiz">Tự đánh giá</a>
@@ -1104,9 +1210,9 @@
 
           <div class="hero-badges-row">
             <span class="badge">5 Bài báo NeurIPS 2026</span>
-            <span class="badge">GS.TS. Trần Thanh Long phụ trách</span>
+            <span class="badge">Royal Society Interface Focus</span>
+            <span class="badge">Quán quân NeurIPS 2025 Competition</span>
             <span class="badge">Online-First linh hoạt</span>
-            <span class="badge">Tài nguyên GPU &amp; Mentor 1-1</span>
           </div>
 
           <div class="hero-buttons">
@@ -1138,7 +1244,7 @@
         </div>
         <div class="strip-item">
           <strong>5 NeurIPS 2026</strong>
-          <span>Minh chứng sinh viên hoàn toàn có thể làm nên công trình A*</span>
+          <span>4 Main Track và 1 Datasets &amp; Benchmarks Track</span>
         </div>
         <div class="strip-item">
           <strong>Online-First</strong>
@@ -1159,18 +1265,14 @@
             <span class="eyebrow">01 / VỀ PHÒNG THÍ NGHIỆM</span>
             <h2>Nơi biến đam mê học thuật thành công trình thực chất.</h2>
 
-            <p class="about-quote">
-              "Chúng mình không tìm kiếm những người đã hoàn hảo. Lab tìm những bạn biết đặt câu hỏi sâu sắc, kiên nhẫn vượt qua thử thách và muốn làm khoa học nghiêm túc."
-            </p>
-
             <p>
-              <strong>Phòng thí nghiệm Trí tuệ nhân tạo đa tác tử và Tin cậy</strong> trực thuộc Khoa Công nghệ Thông tin, Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM. Phòng thí nghiệm do <strong>GS.TS. Trần Thanh Long</strong> phụ trách chuyên môn, cùng sự tham gia của 4 giảng viên và 5 thành viên sinh viên nòng cốt.
+              <strong>Phòng thí nghiệm Trí tuệ nhân tạo đa tác tử và Tin cậy</strong> trực thuộc Khoa Công nghệ Thông tin, Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM. Phòng thí nghiệm do <strong>GS.TS. Trần Thanh Long</strong> phụ trách chuyên môn, cùng sự tham gia của các giảng viên Khoa CNTT và nhóm sinh viên nghiên cứu nòng cốt.
             </p>
             <p>
-              Lab theo đuổi triết lý <em>Nghiên cứu trung thực, thực chất và có giá trị xã hội</em>: làm thế nào để các cộng đồng như Việt Nam có thể tiếp cận, làm chủ và ứng dụng AI tiên tiến với chi phí tối ưu, an toàn và hòa hợp với các giá trị văn hoá bản địa.
+              Lab tập trung vào các bài toán nền tảng và ứng dụng của trí tuệ nhân tạo: hệ đa tác tử (Multi-Agent Systems), lý thuyết trò chơi thuật toán, căn chỉnh mô hình ngôn ngữ lớn theo chuẩn mực bản địa, an toàn AI, và học máy liên tục thế giới thực.
             </p>
             <p>
-              <strong>Đào Sỹ Duy Minh</strong>, thành viên sinh viên của lab, là đồng tác giả của <strong>5 bài báo được chấp nhận tại NeurIPS 2026</strong> (trong đó có 2 bài là đồng tác giả thứ nhất - Co-First Author, và 4 bài cùng tác giả với GS.TS. Trần Thanh Long). Đây là minh chứng rõ nét rằng: với sự dẫn dắt bài bản và nỗ lực bền bỉ, sinh viên hoàn toàn có thể tham gia các công trình khoa học quốc tế ngay trong giai đoạn đại học.
+              Các thành viên sinh viên tại lab được định hướng theo quy trình nghiên cứu chuẩn mực quốc tế: từ việc đặt giả thuyết khoa học, thiết kế giải thuật, thực nghiệm đối sánh trên cụm tính toán GPU đến viết và bảo vệ bài báo tại các hội nghị chuyên ngành hàng đầu.
             </p>
           </div>
 
@@ -1222,10 +1324,10 @@
           <div class="section-head">
             <div>
               <span class="eyebrow">02 / TRỤ CỘT NGHIÊN CỨU</span>
-              <h2>Những bài toán lớn<br>chúng mình cùng giải quyết.</h2>
+              <h2>Các bài toán nền tảng<br>và hướng đi tiên phong.</h2>
             </div>
             <p>
-              Các hướng nghiên cứu tại lab đều hướng tới sự giao thoa giữa lý thuyết toán học vững chắc và giải pháp thực tế giải quyết các thách thức then chốt của AI hiện đại.
+              Các hướng nghiên cứu tại lab tập trung vào sự giao thoa giữa lý thuyết toán học vững chắc và giải pháp thực tế giải quyết các thách thức then chốt của AI hiện đại.
             </p>
           </div>
 
@@ -1318,18 +1420,142 @@
       </div>
     </div>
 
-    <!-- Benefits / What you get Section -->
+    <!-- Publications & Achievements Section -->
     <div class="shell">
-      <section class="section" id="benefits">
+      <section class="section" id="publications">
         <div class="section-head">
           <div>
-            <span class="eyebrow">03 / GIÁ TRỊ &amp; QUYỀN LỢI</span>
-            <h2>Bạn sẽ nhận được gì<br>khi trở thành thành viên?</h2>
+            <span class="eyebrow">03 / CÔNG BỐ KHOA HỌC &amp; THÀNH TÍCH</span>
+            <h2>Công bố khoa học tiêu biểu<br>và Giải thưởng quốc tế.</h2>
           </div>
           <p>
-            Tham gia lab là cơ hội để bạn chuyển mình từ một người "học code" đơn thuần thành một nhà nghiên cứu khoa học có tư duy độc lập và công bố quốc tế.
+            Các công trình nghiên cứu của lab được công bố tại các hội nghị chuyên ngành hàng đầu (NeurIPS) và tạp chí của Hội Hoàng gia Anh (The Royal Society).
           </p>
         </div>
+
+        <div class="pub-grid">
+          <!-- DISCA -->
+          <article class="pub-card">
+            <div class="pub-meta">
+              <span class="pub-tag">NeurIPS 2026 · Main Track</span>
+              <span class="pub-year">2026</span>
+            </div>
+            <h3 class="pub-title">Training-Free Cultural Alignment of Large Language Models via Persona Disagreement</h3>
+            <p class="pub-desc">
+              Căn chỉnh mô hình ngôn ngữ lớn (LLM) theo đa dạng góc nhìn văn hoá không cần can thiệp trọng số (training-free), khai thác sự bất đồng có cấu trúc giữa các nhân vật (persona).
+            </p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://arxiv.org/abs/2605.10843" target="_blank" rel="noopener">arXiv:2605.10843 ↗</a>
+            </div>
+          </article>
+
+          <!-- SkyPart -->
+          <article class="pub-card">
+            <div class="pub-meta">
+              <span class="pub-tag">NeurIPS 2026 · Main Track</span>
+              <span class="pub-year">2026</span>
+            </div>
+            <h3 class="pub-title">Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery</h3>
+            <p class="pub-desc">
+              Định vị địa lý chéo góc nhìn (mặt đất - vệ tinh) bền bỉ trước biến thiên thời tiết cực đoan bằng cơ chế khám phá bộ phận ngữ nghĩa dựa trên nguyên mẫu (prototype).
+            </p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://arxiv.org/abs/2605.11654" target="_blank" rel="noopener">arXiv:2605.11654 ↗</a>
+            </div>
+          </article>
+
+          <!-- Royal Society Interface Focus -->
+          <article class="pub-card">
+            <div class="pub-meta">
+              <span class="pub-tag pub-tag-journal">Royal Society Interface Focus</span>
+              <span class="pub-year">2026</span>
+            </div>
+            <h3 class="pub-title">Payoff Scaling Shapes Cooperation in LLM Agents Across Languages</h3>
+            <p class="pub-desc">
+              Nghiên cứu thực nghiệm về sự tiến hoá và hợp tác giữa các tác tử mô hình ngôn ngữ lớn dưới các tỉ lệ ma trận chi trả và sự khác biệt ngôn ngữ trong lý thuyết trò chơi.
+            </p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://arxiv.org/abs/2601.19082" target="_blank" rel="noopener">arXiv:2601.19082 ↗</a>
+            </div>
+          </article>
+
+          <!-- NeurIPS 2025 Competition Winner -->
+          <article class="pub-card pub-card-award">
+            <div class="pub-meta">
+              <span class="pub-tag pub-tag-award">NeurIPS 2025 · Quán quân 1st Place</span>
+              <span class="pub-year">2025</span>
+            </div>
+            <h3 class="pub-title">The Mouse vs. AI Robust Foraging Competition (1st Place, Cả hai bảng đấu)</h3>
+            <p class="pub-desc">
+              Đội HCMUS_TheFangs giành Quán quân cả hai bảng đấu của cuộc thi NeurIPS 2025 về thị giác máy tính bền bỉ và hành vi thích nghi trong tác vụ foraging sinh học.
+            </p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://mouse-vs-ai.github.io/" target="_blank" rel="noopener">Trang cuộc thi ↗</a>
+              <a class="pub-link" href="https://arxiv.org/abs/2602.00982" target="_blank" rel="noopener">arXiv:2602.00982 ↗</a>
+            </div>
+          </article>
+
+          <!-- COMPOSE -->
+          <article class="pub-card">
+            <div class="pub-meta">
+              <span class="pub-tag">NeurIPS 2026 · Main Track</span>
+              <span class="pub-year">2026</span>
+            </div>
+            <h3 class="pub-title">Unlocking Compositional Generalization in Continual Few-Shot Learning</h3>
+            <p class="pub-desc">
+              Thúc đẩy khả năng tổng quát hoá cấu thành trong học liên tục với số lượng mẫu ít, giúp mô hình tích luỹ khái niệm mới mà không làm suy giảm hiệu năng trên các tổ hợp tri thức cũ.
+            </p>
+            <div class="pub-links">
+              <span class="pub-link" style="color:var(--muted);cursor:default;">NeurIPS 2026 Main Track</span>
+            </div>
+          </article>
+
+          <!-- MIST -->
+          <article class="pub-card">
+            <div class="pub-meta">
+              <span class="pub-tag">NeurIPS 2026 · Main Track</span>
+              <span class="pub-year">2026</span>
+            </div>
+            <h3 class="pub-title">MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound</h3>
+            <p class="pub-desc">
+              Cây quyết định học dạng luồng trực tuyến có độ tin cậy được chứng minh bằng cận McDiarmid, giải quyết bài toán gia tăng lớp dữ liệu thời gian thực.
+            </p>
+            <div class="pub-links">
+              <span class="pub-link" style="color:var(--muted);cursor:default;">NeurIPS 2026 Main Track</span>
+            </div>
+          </article>
+
+          <!-- Mouse vs AI Benchmark -->
+          <article class="pub-card">
+            <div class="pub-meta">
+              <span class="pub-tag">NeurIPS 2026 · Datasets &amp; Benchmarks</span>
+              <span class="pub-year">2026</span>
+            </div>
+            <h3 class="pub-title">Visual Robustness and Neural Alignment in a Shared Foraging Task: The Mouse vs. AI Benchmark</h3>
+            <p class="pub-desc">
+              Bộ chuẩn đối sánh quy mô lớn đánh giá độ bền bỉ thị giác và sự tương đồng biểu diễn nơ-ron giữa chuột sinh học và các kiến trúc mạng nơ-ron nhân tạo trong tác vụ foraging.
+            </p>
+            <div class="pub-links">
+              <span class="pub-link" style="color:var(--muted);cursor:default;">NeurIPS 2026 D&amp;B Track</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- Benefits / What you get Section -->
+    <div class="section-alt">
+      <div class="shell">
+        <section class="section" id="benefits">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">04 / GIÁ TRỊ &amp; QUYỀN LỢI</span>
+              <h2>Bạn sẽ nhận được gì<br>khi trở thành thành viên?</h2>
+            </div>
+            <p>
+              Tham gia lab là cơ hội để bạn chuyển mình từ một người "học code" đơn thuần thành một nhà nghiên cứu khoa học có tư duy độc lập và công bố quốc tế.
+            </p>
+          </div>
 
         <div class="benefits-grid">
           <div class="benefit-item">
@@ -1369,76 +1595,76 @@
           </div>
         </div>
       </section>
-    </div>
-
-    <!-- Interactive Fit Quiz Section -->
-    <div class="section-alt">
-      <div class="shell">
-        <section class="section" id="quiz">
-          <div class="section-head-full" style="text-align: center; margin: 0 auto 40px;">
-            <span class="eyebrow">04 / TỰ ĐÁNH GIÁ</span>
-            <h2>Bạn có phù hợp với Lab không?</h2>
-            <p>Trả lời nhanh 4 câu hỏi trắc nghiệm dưới đây để biết bạn đã sẵn sàng tham gia nghiên cứu cùng chúng mình chưa nhé!</p>
-          </div>
-
-          <div class="quiz-card">
-            <!-- Q1 -->
-            <div class="quiz-question" data-q="1">
-              <div class="quiz-q-title">1. Bạn đã từng có bài báo khoa học hay kinh nghiệm nghiên cứu AI chưa?</div>
-              <div class="quiz-options">
-                <button class="quiz-btn" data-val="no">A. Mình chưa có, chỉ mới tự học hoặc làm bài tập môn học</button>
-                <button class="quiz-btn" data-val="yes">B. Mình đã từng tham gia nghiên cứu hoặc có bài báo nhỏ</button>
-              </div>
-            </div>
-
-            <!-- Q2 -->
-            <div class="quiz-question" data-q="2">
-              <div class="quiz-q-title">2. Bạn có thể dành bao nhiêu thời gian mỗi tuần cho công việc nghiên cứu?</div>
-              <div class="quiz-options">
-                <button class="quiz-btn" data-val="low">A. Dưới 10 giờ / tuần (do lịch học quá bận)</button>
-                <button class="quiz-btn" data-val="good">B. Khoảng 15 - 20 giờ / tuần (hoặc hơn khi vào đợt)</button>
-              </div>
-            </div>
-
-            <!-- Q3 -->
-            <div class="quiz-question" data-q="3">
-              <div class="quiz-q-title">3. Khi gặp một bài toán thuật toán hóc búa hoặc kết quả mô hình bị lỗi, bạn thường:</div>
-              <div class="quiz-options">
-                <button class="quiz-btn" data-val="giveup">A. Dễ nản lòng và muốn đổi ngay sang bài toán khác</button>
-                <button class="quiz-btn" data-val="persist">B. Đọc lại paper, debug kỹ, ghi chép và trao đổi cùng đồng đội</button>
-              </div>
-            </div>
-
-            <!-- Q4 -->
-            <div class="quiz-question" data-q="4">
-              <div class="quiz-q-title">4. Khả năng đọc hiểu tài liệu và bài báo tiếng Anh chuyên ngành của bạn:</div>
-              <div class="quiz-options">
-                <button class="quiz-btn" data-val="ok">A. Đọc được với sự trợ giúp của từ điển hoặc công cụ dịch/AI</button>
-                <button class="quiz-btn" data-val="good">B. Tự tin đọc hiểu cấu trúc và phương pháp của bài báo quốc tế</button>
-              </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 24px;">
-              <button id="evaluateQuizBtn" class="pill pill-accent" style="padding: 14px 32px; font-size: 15px;">Xem đánh giá mức độ phù hợp</button>
-            </div>
-
-            <div id="quizResult" class="quiz-result">
-              <div class="quiz-result-title" id="quizResultTitle">Kết quả đánh giá:</div>
-              <div class="quiz-result-text" id="quizResultText">Vui lòng chọn đáp án cho cả 4 câu hỏi bên trên để nhận đánh giá chi tiết!</div>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
 
-    <!-- Recruitment Process Section -->
+    <!-- Interactive Fit Quiz Section -->
     <div class="shell">
-      <section class="section" id="process">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">05 / HÀNH TRÌNH 4 VÒNG</span>
-            <h2>Quy trình tuyển chọn<br>minh bạch &amp; văn minh.</h2>
+      <section class="section" id="quiz">
+        <div class="section-head-full" style="text-align: center; margin: 0 auto 40px;">
+          <span class="eyebrow">05 / TỰ ĐÁNH GIÁ</span>
+          <h2>Bạn có phù hợp với Lab không?</h2>
+          <p>Trả lời nhanh 4 câu hỏi trắc nghiệm dưới đây để tự đánh giá mức độ sẵn sàng tham gia nghiên cứu cùng lab.</p>
+        </div>
+
+        <div class="quiz-card">
+          <!-- Q1 -->
+          <div class="quiz-question" data-q="1">
+            <div class="quiz-q-title">1. Bạn đã từng có bài báo khoa học hay kinh nghiệm nghiên cứu AI chưa?</div>
+            <div class="quiz-options">
+              <button class="quiz-btn" data-val="no">A. Mình chưa có, chỉ mới tự học hoặc làm bài tập môn học</button>
+              <button class="quiz-btn" data-val="yes">B. Mình đã từng tham gia nghiên cứu hoặc có bài báo nhỏ</button>
+            </div>
           </div>
+
+          <!-- Q2 -->
+          <div class="quiz-question" data-q="2">
+            <div class="quiz-q-title">2. Bạn có thể dành bao nhiêu thời gian mỗi tuần cho công việc nghiên cứu?</div>
+            <div class="quiz-options">
+              <button class="quiz-btn" data-val="low">A. Dưới 10 giờ / tuần (do lịch học quá bận)</button>
+              <button class="quiz-btn" data-val="good">B. Khoảng 15 - 20 giờ / tuần (hoặc hơn khi vào đợt)</button>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="quiz-question" data-q="3">
+            <div class="quiz-q-title">3. Khi gặp một bài toán thuật toán hóc búa hoặc kết quả mô hình bị lỗi, bạn thường:</div>
+            <div class="quiz-options">
+              <button class="quiz-btn" data-val="giveup">A. Dễ nản lòng và muốn đổi ngay sang bài toán khác</button>
+              <button class="quiz-btn" data-val="persist">B. Đọc lại paper, debug kỹ, ghi chép và trao đổi cùng đồng đội</button>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="quiz-question" data-q="4">
+            <div class="quiz-q-title">4. Khả năng đọc hiểu tài liệu và bài báo tiếng Anh chuyên ngành của bạn:</div>
+            <div class="quiz-options">
+              <button class="quiz-btn" data-val="ok">A. Đọc được với sự trợ giúp của từ điển hoặc công cụ dịch/AI</button>
+              <button class="quiz-btn" data-val="good">B. Tự tin đọc hiểu cấu trúc và phương pháp của bài báo quốc tế</button>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 24px;">
+            <button id="evaluateQuizBtn" class="pill pill-accent" style="padding: 14px 32px; font-size: 15px;">Xem đánh giá mức độ phù hợp</button>
+          </div>
+
+          <div id="quizResult" class="quiz-result">
+            <div class="quiz-result-title" id="quizResultTitle">Kết quả đánh giá:</div>
+            <div class="quiz-result-text" id="quizResultText">Vui lòng chọn đáp án cho cả 4 câu hỏi bên trên để nhận đánh giá chi tiết!</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Recruitment Process Section -->
+    <div class="section-alt">
+      <div class="shell">
+        <section class="section" id="process">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">06 / HÀNH TRÌNH 4 VÒNG</span>
+              <h2>Quy trình tuyển chọn<br>minh bạch &amp; văn minh.</h2>
+            </div>
           <p>
             Quy trình được thiết kế để tìm hiểu cách bạn tư duy, giải quyết vấn đề và tinh thần học hỏi, hoàn toàn không đánh đố hay yêu cầu thành tích sẵn có.
           </p>
@@ -1553,80 +1779,79 @@
           </div>
         </div>
       </section>
+      </div>
     </div>
 
     <!-- FAQ Section -->
-    <div class="section-alt">
-      <div class="shell">
-        <section class="section" id="faq">
-          <div class="section-head-full" style="text-align: center; margin: 0 auto 40px;">
-            <span class="eyebrow">06 / CÂU HỎI THƯỜNG GẶP</span>
-            <h2>Giải đáp mọi băn khoăn của bạn.</h2>
-            <p>Nếu bạn có thêm câu hỏi chưa được giải đáp ở đây, đừng ngần ngại gửi email cho nhóm nhé!</p>
-          </div>
+    <div class="shell">
+      <section class="section" id="faq">
+        <div class="section-head-full" style="text-align: center; margin: 0 auto 40px;">
+          <span class="eyebrow">07 / CÂU HỎI THƯỜNG GẶP</span>
+          <h2>Giải đáp các câu hỏi thường gặp.</h2>
+          <p>Nếu bạn có câu hỏi chưa được giải đáp ở đây, bạn có thể gửi email trực tiếp cho ban tuyển sinh viên của lab.</p>
+        </div>
 
-          <div class="faq-container">
-            <details>
-              <summary>Sinh viên năm nhất hoặc năm hai chưa học nhiều môn chuyên ngành có nộp được không?</summary>
-              <p>
-                Hoàn toàn được! Lab hoan nghênh các bạn sinh viên từ năm 1 đến năm 4. Với các bạn năm 1-2, nhóm đánh giá cao nền tảng toán cơ bản vững, khả năng lập trình tự học và tinh thần sẵn sàng tiếp thu cái mới.
-              </p>
-            </details>
+        <div class="faq-container">
+          <details>
+            <summary>Sinh viên năm nhất hoặc năm hai chưa học nhiều môn chuyên ngành có nộp được không?</summary>
+            <p>
+              Hoàn toàn được! Lab hoan nghênh các bạn sinh viên từ năm 1 đến năm 4. Với các bạn năm 1-2, nhóm đánh giá cao nền tảng toán cơ bản vững, khả năng lập trình tự học và tinh thần sẵn sàng tiếp thu cái mới.
+            </p>
+          </details>
 
-            <details>
-              <summary>Mình học trường khác (ngoài HCMUS) có thể ứng tuyển không?</summary>
-              <p>
-                Có. Mặc dù lab trực thuộc FIT - HCMUS, chúng mình luôn chào đón các bạn sinh viên có đam mê nghiên cứu từ các trường thành viên ĐHQG-HCM và các trường đại học lân cận.
-              </p>
-            </details>
+          <details>
+            <summary>Mình học trường khác (ngoài HCMUS) có thể ứng tuyển không?</summary>
+            <p>
+              Có. Mặc dù lab trực thuộc FIT - HCMUS, chúng mình luôn chào đón các bạn sinh viên có đam mê nghiên cứu từ các trường thành viên ĐHQG-HCM và các trường đại học lân cận.
+            </p>
+          </details>
 
-            <details>
-              <summary>Làm việc online-first thì lịch sinh hoạt và trao đổi như thế nào?</summary>
-              <p>
-                Lab làm việc chủ yếu qua các kênh trao đổi trực tuyến (Google Meet, Telegram/Slack, Overleaf, GitHub). Mỗi tuần có buổi họp lab chung và buổi sync 1-on-1 định kỳ với mentor. Lịch họp được sắp xếp linh hoạt để không trùng lịch thi cử của bạn.
-              </p>
-            </details>
+          <details>
+            <summary>Làm việc online-first thì lịch sinh hoạt và trao đổi như thế nào?</summary>
+            <p>
+              Lab làm việc chủ yếu qua các kênh trao đổi trực tuyến (Google Meet, Telegram/Slack, Overleaf, GitHub). Mỗi tuần có buổi họp lab chung và buổi sync 1-on-1 định kỳ với mentor. Lịch họp được sắp xếp linh hoạt để không trùng lịch thi cử của bạn.
+            </p>
+          </details>
 
-            <details>
-              <summary>Làm bài kiểm tra kiến thức và Mini Proposal có được dùng AI (ChatGPT, Claude...) không?</summary>
-              <p>
-                Được phép dùng tài liệu và các công cụ AI hỗ trợ, NHƯNG bạn phải có mục khai báo rõ ràng đã dùng công cụ gì, cho câu nào và hỗ trợ ra sao. Quan trọng nhất: ở các buổi phỏng vấn trực tiếp, bạn phải tự giải thích được bản chất kỹ thuật của phương pháp mà không dựa vào AI.
-              </p>
-            </details>
+          <details>
+            <summary>Làm bài kiểm tra kiến thức và Mini Proposal có được dùng AI (ChatGPT, Claude...) không?</summary>
+            <p>
+              Được phép dùng tài liệu và các công cụ AI hỗ trợ, NHƯNG bạn phải có mục khai báo rõ ràng đã dùng công cụ gì, cho câu nào và hỗ trợ ra sao. Quan trọng nhất: ở các buổi phỏng vấn trực tiếp, bạn phải tự giải thích được bản chất kỹ thuật của phương pháp mà không dựa vào AI.
+            </p>
+          </details>
 
-            <details>
-              <summary>Mình không có máy tính cấu hình mạnh / card GPU rời thì có nghiên cứu được không?</summary>
-              <p>
-                Hoàn toàn được. Ở vòng tuyển chọn (Mini Proposal), lab không yêu cầu bạn huấn luyện mô hình hay chạy thực nghiệm. Khi vào lab, với các đề tài nghiên cứu phù hợp, lab sẽ hỗ trợ cấp quyền truy cập tài nguyên cụm máy chủ GPU.
-              </p>
-            </details>
+          <details>
+            <summary>Mình không có máy tính cấu hình mạnh / card GPU rời thì có nghiên cứu được không?</summary>
+            <p>
+              Hoàn toàn được. Ở vòng tuyển chọn (Mini Proposal), lab không yêu cầu bạn huấn luyện mô hình hay chạy thực nghiệm. Khi vào lab, với các đề tài nghiên cứu phù hợp, lab sẽ hỗ trợ cấp quyền truy cập tài nguyên cụm máy chủ GPU.
+            </p>
+          </details>
 
-            <details>
-              <summary>Tham gia lab có đảm bảo sẽ có bài báo, học bổng hay suất học Tiến sĩ không?</summary>
-              <p>
-                Việc tham gia lab là môi trường rèn luyện học thuật thực chiến, KHÔNG phải cam kết tự động về học bổng, việc làm hay bài báo. Tuy nhiên, nếu bạn nỗ lực và đóng góp thực chất vào các công trình khoa học, bạn sẽ là đồng tác giả của bài báo và được giảng viên hỗ trợ viết thư giới thiệu uy tín để apply học bổng quốc tế.
-              </p>
-            </details>
+          <details>
+            <summary>Tham gia lab có đảm bảo sẽ có bài báo, học bổng hay suất học Tiến sĩ không?</summary>
+            <p>
+              Việc tham gia lab là môi trường rèn luyện học thuật thực chiến, KHÔNG phải cam kết tự động về học bổng, việc làm hay bài báo. Tuy nhiên, nếu bạn nỗ lực và đóng góp thực chất vào các công trình khoa học, bạn sẽ là đồng tác giả của bài báo và được giảng viên hỗ trợ viết thư giới thiệu uy tín để apply học bổng quốc tế.
+            </p>
+          </details>
 
-            <details>
-              <summary>Hồ sơ và thông tin cá nhân của ứng viên được bảo mật ra sao?</summary>
-              <p>
-                Dữ liệu đăng ký và CV của bạn chỉ được dùng cho mục đích xét tuyển đợt này, được lưu trữ bảo mật trên Drive có kiểm soát phân quyền của ban tuyển, và sẽ được hủy/xóa theo đúng quy định sau khi kết thúc đợt tuyển.
-              </p>
-            </details>
-          </div>
-        </section>
-      </div>
+          <details>
+            <summary>Hồ sơ và thông tin cá nhân của ứng viên được bảo mật ra sao?</summary>
+            <p>
+              Dữ liệu đăng ký và CV của bạn chỉ được dùng cho mục đích xét tuyển đợt này, được lưu trữ bảo mật trên Drive có kiểm soát phân quyền của ban tuyển, và sẽ được hủy/xóa theo đúng quy định sau khi kết thúc đợt tuyển.
+            </p>
+          </details>
+        </div>
+      </section>
     </div>
 
     <!-- Apply Call to Action Section -->
     <div class="shell">
       <section class="apply-banner" id="apply">
         <div>
-          <span class="eyebrow" style="color:#1d4d2b;">07 / BẮT ĐẦU HÀNH TRÌNH</span>
+          <span class="eyebrow" style="color:#1d4d2b;">08 / BẮT ĐẦU HÀNH TRÌNH</span>
           <h2>Tham gia nghiên cứu cùng Lab</h2>
           <p>
-            Đừng để sự ngần ngại giữ chân bạn. Hãy gửi đơn đăng ký và bắt đầu cuộc trò chuyện cùng chúng mình ngay hôm nay!
+            Gửi đơn đăng ký trực tuyến kèm CV học thuật để bắt đầu quá trình trao đổi cùng ban tuyển chọn của lab.
           </p>
           <div style="margin-top:20px;">
             <span class="badge" style="background:#ffffff; color:#1e5a3a; font-weight:800;">
@@ -1670,9 +1895,12 @@
           <ul>
             <li><a href="#about">Về phòng thí nghiệm</a></li>
             <li><a href="#research">3 Trụ cột nghiên cứu</a></li>
-            <li><a href="#process">Quy trình tuyển 4 vòng</a></li>
+            <li><a href="#publications">Công bố &amp; Giải thưởng</a></li>
+            <li><a href="#benefits">Quyền lợi thành viên</a></li>
             <li><a href="#quiz">Bài trắc nghiệm tự đánh giá</a></li>
+            <li><a href="#process">Quy trình tuyển 4 vòng</a></li>
             <li><a href="#cv-guide">Cẩm nang chuẩn bị CV</a></li>
+            <li><a href="#faq">Câu hỏi thường gặp</a></li>
           </ul>
         </div>
 
