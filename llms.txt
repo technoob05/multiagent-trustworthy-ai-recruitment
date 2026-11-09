@@ -1,0 +1,40 @@
+# Multi-Agent and Trustworthy AI Laboratory: Recruitment
+
+> Official public recruitment page of the Multi-Agent and Trustworthy AI Laboratory, Faculty of Information Technology, University of Science, VNU-HCM (FIT, HCMUS).
+
+## About the Laboratory
+
+- **Institution:** Faculty of Information Technology, University of Science, Vietnam National University Ho Chi Minh City (FIT, HCMUS).
+- **Head of Lab:** Prof. Long Tran-Thanh (Professor of AI, University of Warwick, UK; Adjunct Professor at FIT, HCMUS).
+- **Faculty Mentors:** Assoc. Prof. Nguyen Van Vu, Dr. Chau Thanh Duc, Dr. Le Trung Hoang.
+- **Student Mentors:** Dao Sy Duy Minh (co-author of 5 accepted papers at NeurIPS 2026, including 2 co-first author papers) and the senior student core team.
+- **Current Opening:** Recruiting 5 passionate undergraduate/graduate students to join the current cohort of 5 student researchers.
+- **Work Mode:** Online-first, flexible scheduling around academic courses, weekly 1-on-1 and lab-wide sync meetings.
+- **Compute Resources:** GPU compute cluster access supported for verified research projects.
+
+## Core Research Pillars
+
+1. **Multi-Agent Systems & Game-Theoretic AI:** Multi-agent reinforcement learning (MARL), algorithmic game theory, strategic coordination, negotiation, and LLM-based agent societies. Target venues: NeurIPS, ICML, ICLR, AAMAS.
+2. **Culture-Aware & Trustworthy Foundation Model Alignment:** Aligning large language and vision-language models with diverse cultural, ethical, and safety norms; steering black-box models via APIs; jailbreak defenses. Target venues: NeurIPS, ICML, ACL, EMNLP, TACL.
+3. **Continual Learning & Reliable Computer Vision:** Mitigating catastrophic forgetting in open-world settings, online learning algorithms, robust visual recognition under real-world distribution shifts. Target venues: NeurIPS, CVPR, ICCV, ECCV.
+
+## What You Will Gain
+
+- Rigorous 1-on-1 research mentorship from seasoned researchers with proven A* conference track records.
+- Access to high-performance GPU clusters for training and running empirical evaluations.
+- First-hand training in scientific inquiry, LaTeX manuscript preparation, and international peer-review rebuttal.
+- Stepping stone toward top-tier fully funded PhD scholarships (US, UK, Europe, Australia, Singapore) and elite industrial AI R&D labs.
+
+## 4-Round Recruitment Process
+
+1. **Round 1 - Application & Research CV:** Submit academic background, coursework, programming experience, and research statement via the official form. Pre-existing publications are NOT required.
+2. **Round 2 - Basic AI & Machine Learning Assessment:** 30-minute online assessment covering core ML concepts, baseline models, metric selection, and data leakage. Open-book and AI tools are permitted with proper attribution.
+3. **Round 3 - Structured Research & Culture Interview:** 35-45 minute conversational interview about course projects, problem-solving mindset, collaborative dynamics, and research goals.
+4. **Round 4 - Mini Research Proposal:** Maximum 2-page PDF proposal on a given real-world question (~3 hours effort within a 5-day window). No model training or empirical results required; focus is on problem formulation and sound experimental design. Followed by a 10-minute presentation and 10-minute Q&A.
+
+## Official Links & Contacts
+
+- **Recruitment Landing Page:** https://thefangs-ai-recruitment.boxycoral4.chatgpt.site/
+- **Application Form:** https://docs.google.com/forms/d/1w_Xi0H-PpbrHX8kz4wdaWaZwPtg9k6QitK-RzBbMNVY/edit
+- **Primary Contact Email:** 23122041@student.hcmus.edu.vn
+- **Physical Address:** 227 Nguyen Van Cu Street, Ward 4, District 5, Ho Chi Minh City, Vietnam

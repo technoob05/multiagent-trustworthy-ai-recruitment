@@ -1,0 +1,1769 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Phòng thí nghiệm Trí tuệ nhân tạo đa tác tử và Tin cậy (Multi-Agent & Trustworthy AI Lab) - Khoa CNTT, Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM tuyển thành viên nghiên cứu AI.">
+  <meta name="keywords" content="Multi-Agent AI, Trustworthy AI, HCMUS, FIT HCMUS, AI Research, NeurIPS, Tuyen thanh vien Lab, Tran Thanh Long, Dao Sy Duy Minh">
+  <meta name="author" content="Multi-Agent & Trustworthy AI Laboratory">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thefangs-ai-recruitment.boxycoral4.chatgpt.site/">
+  <meta property="og:title" content="Multi-Agent & Trustworthy AI Lab | Tuyển thành viên nghiên cứu AI">
+  <meta property="og:description" content="Phòng thí nghiệm AI đa tác tử và Tin cậy (FIT, HCMUS) do GS.TS. Trần Thanh Long phụ trách tuyển 05 thành viên sinh viên. Làm việc online-first, có mentor 1-1 và tài nguyên GPU.">
+  <meta property="og:image" content="https://thefangs-ai-recruitment.boxycoral4.chatgpt.site/visual.png">
+  <meta property="og:image:width" content="1254">
+  <meta property="og:image:height" content="1254">
+  <meta property="og:locale" content="vi_VN">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://thefangs-ai-recruitment.boxycoral4.chatgpt.site/">
+  <meta name="twitter:title" content="Multi-Agent & Trustworthy AI Lab | Tuyển thành viên nghiên cứu AI">
+  <meta name="twitter:description" content="Phòng thí nghiệm AI đa tác tử và Tin cậy (FIT, HCMUS) tuyển 05 thành viên sinh viên cùng làm nghiên cứu đỉnh cao.">
+  <meta name="twitter:image" content="https://thefangs-ai-recruitment.boxycoral4.chatgpt.site/visual.png">
+
+  <title>Multi-Agent & Trustworthy AI Lab | Tuyển thành viên nghiên cứu AI - FIT, HCMUS</title>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Phòng thí nghiệm Trí tuệ nhân tạo đa tác tử và Tin cậy (Multi-Agent & Trustworthy AI Lab)",
+    "alternateName": "Multi-Agent and Trustworthy AI Laboratory",
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM",
+      "department": {
+        "@type": "Department",
+        "name": "Khoa Công nghệ Thông tin"
+      }
+    },
+    "description": "Phòng thí nghiệm nghiên cứu AI đa tác tử, căn chỉnh văn hóa và an toàn cho mô hình nền tảng, học máy tin cậy và thị giác máy tính.",
+    "url": "https://thefangs-ai-recruitment.boxycoral4.chatgpt.site/",
+    "email": "23122041@student.hcmus.edu.vn"
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f5f7f2;
+      --surface: #ffffff;
+      --surface-2: #e9eee4;
+      --surface-card: #ffffff;
+      --ink: #0d2627;
+      --ink-secondary: #355350;
+      --muted: #53726f;
+      --line: #d1ded2;
+      --line-subtle: #e3ece4;
+      --primary: #1e5a3a;
+      --primary-hover: #15422a;
+      --accent-lime: #c8f07d;
+      --accent-lime-dark: #284412;
+      --badge-bg: #e2f4ce;
+      --badge-text: #1d4d2b;
+      --hero-sub: #3d7650;
+      --shadow-sm: 0 2px 8px rgba(13, 38, 39, 0.05);
+      --shadow-md: 0 10px 30px rgba(13, 38, 39, 0.08);
+      --shadow-lg: 0 20px 50px rgba(13, 38, 39, 0.12);
+      --radius: 12px;
+      --radius-sm: 6px;
+      --radius-pill: 999px;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0c1a1b;
+      --surface: #122425;
+      --surface-2: #182e2f;
+      --surface-card: #152b2c;
+      --ink: #eaf4ed;
+      --ink-secondary: #b5cdc2;
+      --muted: #8ba89c;
+      --line: #263d3c;
+      --line-subtle: #1c3232;
+      --primary: #34a86b;
+      --primary-hover: #42bd7c;
+      --accent-lime: #a3ea42;
+      --accent-lime-dark: #081d05;
+      --badge-bg: #1c3829;
+      --badge-text: #a8efb5;
+      --hero-sub: #5fc489;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      transition: background 0.25s ease, color 0.25s ease;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    p { margin: 0 0 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* Container Shell */
+    .shell {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245, 247, 242, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+    [data-theme="dark"] header {
+      background: rgba(12, 26, 27, 0.92);
+    }
+
+    nav {
+      max-width: 1240px;
+      margin: auto;
+      padding: 16px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      font-weight: 850;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+    .brand-title {
+      font-size: 17px;
+      font-weight: 850;
+      color: var(--ink);
+    }
+    .brand-title span { color: var(--primary); }
+    .brand-sub {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .navlinks a {
+      color: var(--ink-secondary);
+      transition: color 0.15s ease;
+    }
+    .navlinks a:hover {
+      color: var(--primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Buttons & Badges */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--ink);
+      color: #ffffff;
+      border-radius: var(--radius-pill);
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    [data-theme="dark"] .pill {
+      background: var(--primary);
+      color: #ffffff;
+    }
+    .pill:hover {
+      background: var(--primary);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+    [data-theme="dark"] .pill:hover {
+      background: var(--primary-hover);
+    }
+
+    .pill-secondary {
+      background: var(--surface);
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+    .pill-secondary:hover {
+      background: var(--surface-2);
+      border-color: var(--ink);
+      color: var(--ink);
+    }
+
+    .pill-accent {
+      background: var(--accent-lime);
+      color: var(--accent-lime-dark);
+      font-weight: 800;
+    }
+    .pill-accent:hover {
+      background: #bbf062;
+      color: #1a3209;
+    }
+
+    .theme-toggle {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      border-radius: var(--radius-pill);
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 16px;
+    }
+    .theme-toggle:hover {
+      border-color: var(--primary);
+      background: var(--surface-2);
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--accent-lime);
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 700;
+      border: 1px solid rgba(30, 90, 58, 0.15);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 70px 0 60px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 5.8vw, 80px);
+      line-height: 1.04;
+      letter-spacing: -0.055em;
+      margin: 0 0 24px;
+      font-weight: 800;
+    }
+    .hero h1 em {
+      color: var(--hero-sub);
+      font-style: normal;
+      background: linear-gradient(135deg, var(--primary) 0%, #3d7650 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .lead {
+      max-width: 620px;
+      color: var(--ink-secondary);
+      font-size: 19px;
+      line-height: 1.65;
+      margin-bottom: 30px;
+    }
+
+    .hero-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .hero-buttons .pill {
+      padding: 14px 26px;
+      font-size: 15px;
+    }
+
+    .visual-wrapper {
+      position: relative;
+    }
+    .visual-card {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .visual-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1/1;
+      display: block;
+      object-fit: cover;
+    }
+
+    .visual-floating-badge {
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      background: var(--accent-lime);
+      color: var(--accent-lime-dark);
+      padding: 16px 22px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 750;
+      box-shadow: var(--shadow-md);
+      border: 2px solid var(--surface);
+    }
+    .visual-floating-badge strong {
+      display: block;
+      font-size: 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .visual-top-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(13, 38, 39, 0.85);
+      color: #ffffff;
+      padding: 8px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Key Stats Strip */
+    .strip {
+      background: var(--surface-card);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin: 30px 0 0;
+    }
+    .strip-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      padding: 28px 0;
+    }
+    .strip-item {
+      border-left: 3px solid var(--primary);
+      padding-left: 16px;
+    }
+    .strip-item strong {
+      display: block;
+      font-size: 24px;
+      font-weight: 850;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+    }
+    .strip-item span {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.4;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* Generic Sections */
+    .section {
+      padding: 90px 0;
+    }
+    .section-alt {
+      background: var(--surface-2);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 50px;
+    }
+    .section-head-full {
+      max-width: 780px;
+      margin-bottom: 50px;
+    }
+    .section h2 {
+      font-size: clamp(32px, 3.8vw, 50px);
+      line-height: 1.1;
+      letter-spacing: -0.045em;
+      margin: 12px 0 0;
+      font-weight: 800;
+    }
+    .section-head p, .section-head-full p {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    /* Research Pillars Grid */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .research-card {
+      background: var(--surface-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .research-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    .card-num {
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+    .research-card h3 {
+      font-size: 22px;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      margin: 0 0 14px;
+      font-weight: 750;
+    }
+    .research-card p {
+      color: var(--ink-secondary);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .research-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      border-top: 1px solid var(--line-subtle);
+      padding-top: 16px;
+    }
+    .research-tags span {
+      font-size: 11px;
+      background: var(--surface-2);
+      color: var(--muted);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Research Workflow Box */
+    .workflow-box {
+      margin-top: 40px;
+      background: var(--surface-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .workflow-title {
+      font-size: 18px;
+      font-weight: 750;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .workflow-steps {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+    }
+    .wf-step {
+      background: var(--surface-2);
+      border-radius: 8px;
+      padding: 16px;
+      position: relative;
+    }
+    .wf-num {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .wf-name {
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .about-story p {
+      color: var(--ink-secondary);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+    .about-quote {
+      font-size: 21px;
+      font-weight: 650;
+      line-height: 1.45;
+      color: var(--ink);
+      border-left: 3px solid var(--primary);
+      padding-left: 20px;
+      margin: 24px 0 28px;
+      letter-spacing: -0.02em;
+    }
+
+    .people-card {
+      background: var(--surface-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 20px;
+    }
+    .people-card h4 {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin: 0 0 16px;
+      font-weight: 800;
+    }
+    .person-row {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .person {
+      border-bottom: 1px solid var(--line-subtle);
+      padding-bottom: 12px;
+    }
+    .person:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .person-name {
+      font-weight: 750;
+      font-size: 15px;
+      color: var(--ink);
+    }
+    .person-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .benefit-item {
+      background: var(--surface-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .benefit-icon {
+      font-size: 26px;
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+    .benefit-item h3 {
+      font-size: 19px;
+      margin: 0 0 10px;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+    }
+    .benefit-item p {
+      color: var(--ink-secondary);
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+
+    /* Fit Quiz Widget */
+    .quiz-card {
+      background: var(--surface-card);
+      border: 2px solid var(--line);
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: var(--shadow-md);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .quiz-question {
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line-subtle);
+    }
+    .quiz-question:last-of-type {
+      border-bottom: none;
+    }
+    .quiz-q-title {
+      font-size: 16px;
+      font-weight: 750;
+      margin-bottom: 14px;
+      color: var(--ink);
+    }
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .quiz-btn {
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      color: var(--ink);
+      transition: all 0.15s ease;
+      font-family: inherit;
+    }
+    .quiz-btn:hover {
+      border-color: var(--primary);
+      background: rgba(30, 90, 58, 0.08);
+    }
+    .quiz-btn.selected {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+    .quiz-result {
+      margin-top: 24px;
+      background: var(--badge-bg);
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      padding: 20px;
+      display: none;
+    }
+    .quiz-result-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .quiz-result-text {
+      font-size: 14px;
+      color: var(--badge-text);
+      line-height: 1.6;
+    }
+
+    /* Steps Section */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .step-card {
+      background: var(--surface-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .step-badge {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .step-card h3 {
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+      margin: 0 0 12px;
+      font-weight: 750;
+    }
+    .step-card p {
+      color: var(--ink-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .step-meta {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      border-top: 1px solid var(--line-subtle);
+      padding-top: 12px;
+    }
+
+    /* CV Guide Box */
+    .cv-guide-box {
+      background: var(--surface-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+      margin-top: 40px;
+    }
+    .cv-guide-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .cv-col {
+      background: var(--surface-2);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .cv-col h4 {
+      font-size: 15px;
+      margin: 0 0 10px;
+      color: var(--primary);
+      font-weight: 750;
+    }
+    .cv-col ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 13.5px;
+      color: var(--ink-secondary);
+      line-height: 1.6;
+    }
+    .cv-col li { margin-bottom: 6px; }
+
+    /* FAQ Section */
+    .faq-container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    details {
+      background: var(--surface-card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      padding: 18px 22px;
+      transition: all 0.2s ease;
+    }
+    details[open] {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+    summary {
+      font-size: 16px;
+      font-weight: 750;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--ink);
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--primary);
+      transition: transform 0.2s ease;
+      margin-left: 12px;
+    }
+    details[open] summary::after {
+      content: "−";
+    }
+    details p {
+      margin-top: 14px;
+      color: var(--ink-secondary);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    /* Apply CTA Banner */
+    .apply-banner {
+      background: linear-gradient(135deg, #c8f07d 0%, #b3eb5c 100%);
+      color: #0d2627;
+      border-radius: var(--radius);
+      padding: 56px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 40px;
+      align-items: center;
+      box-shadow: var(--shadow-lg);
+      margin: 40px 0;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    [data-theme="dark"] .apply-banner {
+      background: linear-gradient(135deg, #183e28 0%, #112c1d 100%);
+      color: #eaf4ed;
+      border-color: var(--primary);
+    }
+    .apply-banner h2 {
+      font-size: clamp(32px, 3.5vw, 46px);
+      letter-spacing: -0.04em;
+      margin: 8px 0 14px;
+      line-height: 1.1;
+      font-weight: 850;
+    }
+    .apply-banner p {
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 620px;
+      color: #244833;
+    }
+    [data-theme="dark"] .apply-banner p {
+      color: #b5d5c0;
+    }
+    .apply-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .apply-actions .pill {
+      font-size: 15px;
+      padding: 16px 30px;
+      background: #0d2627;
+      color: #ffffff;
+    }
+    [data-theme="dark"] .apply-actions .pill {
+      background: var(--accent-lime);
+      color: var(--accent-lime-dark);
+    }
+    .apply-meta {
+      font-size: 13px;
+      color: #3b5f48;
+      line-height: 1.5;
+    }
+    [data-theme="dark"] .apply-meta {
+      color: #9cbda7;
+    }
+
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 0, 0, 0.08);
+      border: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      font-family: inherit;
+      color: inherit;
+      margin-top: 4px;
+    }
+    [data-theme="dark"] .copy-btn {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .copy-btn:hover {
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 50px 0 60px;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-brand h4 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 0 0 8px;
+    }
+    .footer-col h5 {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 0 0 14px;
+      font-weight: 800;
+    }
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-col li {
+      margin-bottom: 8px;
+    }
+    .footer-col a:hover {
+      color: var(--primary);
+    }
+    .footer-bottom {
+      border-top: 1px solid var(--line-subtle);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 50px 0 40px;
+      }
+      .visual-wrapper {
+        max-width: 460px;
+        margin: 0 auto;
+      }
+      .strip-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .research-grid, .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+      .apply-banner {
+        grid-template-columns: 1fr;
+        padding: 36px 28px;
+      }
+      .workflow-steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .cv-guide-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav {
+        padding: 14px 20px;
+      }
+      .navlinks { display: none; }
+      .shell { padding: 0 20px; }
+      .hero h1 { font-size: 40px; }
+      .lead { font-size: 16px; }
+      .strip-inner { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .workflow-steps { grid-template-columns: 1fr 1fr; }
+      .quiz-options { grid-template-columns: 1fr; }
+      .visual-floating-badge {
+        position: static;
+        margin-top: 12px;
+        border-radius: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <nav>
+      <a class="brand" href="#top">
+        <span class="brand-title">MULTI-AGENT <span>&amp;</span> TRUSTWORTHY AI</span>
+        <span class="brand-sub">FIT · HCMUS Laboratory</span>
+      </a>
+
+      <div class="navlinks">
+        <a href="#about">Về Lab</a>
+        <a href="#research">Hướng nghiên cứu</a>
+        <a href="#benefits">Quyền lợi</a>
+        <a href="#process">Quy trình</a>
+        <a href="#quiz">Tự đánh giá</a>
+        <a href="#cv-guide">Cẩm nang CV</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" title="Đổi giao diện Sáng / Tối" aria-label="Đổi giao diện">🌓</button>
+        <a class="pill" href="#apply">Nộp đơn ngay ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <div class="shell">
+      <section class="hero">
+        <div>
+          <div class="hero-meta">
+            <span class="eyebrow">FIT · HCMUS &nbsp;/&nbsp; PHÒNG THÍ NGHIỆM AI</span>
+            <span class="badge">🔥 Tuyển Đợt Mới: 05 Thành viên</span>
+          </div>
+
+          <h1>Nghiên cứu AI đỉnh cao.<br><em>Cùng nhau tiến xa.</em></h1>
+
+          <p class="lead">
+            Phòng thí nghiệm Trí tuệ nhân tạo đa tác tử và Tin cậy tìm kiếm những bạn sinh viên tò mò, kiên trì và đam mê để cùng giải quyết các bài toán AI tiên phong, hướng đến các công bố khoa học tại hội nghị hàng đầu thế giới.
+          </p>
+
+          <div class="hero-badges-row">
+            <span class="badge">🏆 5 Bài NeurIPS 2026</span>
+            <span class="badge">👨‍🏫 GS.TS. Trần Thanh Long phụ trách</span>
+            <span class="badge">🌐 Online-First linh hoạt</span>
+            <span class="badge">⚡ Tài nguyên GPU &amp; Mentor 1-1</span>
+          </div>
+
+          <div class="hero-buttons">
+            <a class="pill pill-accent" href="#apply">Ứng tuyển tham gia Lab ↗</a>
+            <a class="pill pill-secondary" href="#process">Xem quy trình tuyển chọn</a>
+            <a class="pill pill-secondary" href="#quiz">Kiểm tra mức độ phù hợp</a>
+          </div>
+        </div>
+
+        <div class="visual-wrapper">
+          <div class="visual-card">
+            <img src="visual.png" width="1254" height="1254" alt="Mạng lưới tương tác của các tác tử AI và mô hình nền tảng" loading="eager">
+            <div class="visual-top-badge">FIT - HCMUS Research</div>
+          </div>
+          <div class="visual-floating-badge">
+            <strong>+5 Đồng đội mới</strong>
+            Sinh viên đam mê nghiên cứu AI
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Stats & Key Pillars Strip -->
+    <div class="strip">
+      <div class="shell strip-inner">
+        <div class="strip-item">
+          <strong>5 + 5 Thành viên</strong>
+          <span>5 sinh viên hiện tại · Đang mở tuyển thêm 5 bạn</span>
+        </div>
+        <div class="strip-item">
+          <strong>5 NeurIPS 2026</strong>
+          <span>Minh chứng sinh viên hoàn toàn có thể làm nên công trình A*</span>
+        </div>
+        <div class="strip-item">
+          <strong>Online-First</strong>
+          <span>Làm việc từ xa linh hoạt, tối ưu theo lịch học tập</span>
+        </div>
+        <div class="strip-item">
+          <strong>PhD &amp; Top R&amp;D</strong>
+          <span>Bệ phóng vững chắc cho học bổng PhD toàn phần và công ty lớn</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- About The Lab Section -->
+    <div class="shell">
+      <section class="section" id="about">
+        <div class="about-grid">
+          <div class="about-story">
+            <span class="eyebrow">01 / VỀ PHÒNG THÍ NGHIỆM</span>
+            <h2>Nơi biến đam mê học thuật thành công trình thực chất.</h2>
+
+            <p class="about-quote">
+              "Chúng mình không tìm kiếm những người đã hoàn hảo. Lab tìm những bạn biết đặt câu hỏi sâu sắc, kiên nhẫn vượt qua thử thách và muốn làm khoa học nghiêm túc."
+            </p>
+
+            <p>
+              <strong>Phòng thí nghiệm Trí tuệ nhân tạo đa tác tử và Tin cậy</strong> trực thuộc Khoa Công nghệ Thông tin, Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM. Phòng thí nghiệm do <strong>GS.TS. Trần Thanh Long</strong> phụ trách chuyên môn, cùng sự tham gia của 4 giảng viên và 5 thành viên sinh viên nòng cốt.
+            </p>
+            <p>
+              Lab theo đuổi triết lý <em>Nghiên cứu trung thực, thực chất và có giá trị xã hội</em>: làm thế nào để các cộng đồng như Việt Nam có thể tiếp cận, làm chủ và ứng dụng AI tiên tiến với chi phí tối ưu, an toàn và hòa hợp với các giá trị văn hoá bản địa.
+            </p>
+            <p>
+              <strong>Đào Sỹ Duy Minh</strong>, thành viên sinh viên của lab, là đồng tác giả của <strong>5 bài báo được chấp nhận tại NeurIPS 2026</strong> (trong đó có 2 bài là đồng tác giả thứ nhất - Co-First Author, và 4 bài cùng tác giả với GS.TS. Trần Thanh Long). Đây là minh chứng rõ nét rằng: với sự dẫn dắt bài bản và nỗ lực bền bỉ, sinh viên hoàn toàn có thể chinh phục đỉnh cao học thuật quốc tế ngay trong giai đoạn đại học.
+            </p>
+          </div>
+
+          <div class="about-sidebar">
+            <div class="people-card">
+              <h4>Đội ngũ Cố vấn &amp; Giảng viên</h4>
+              <div class="person-row">
+                <div class="person">
+                  <div class="person-name">GS.TS. Trần Thanh Long</div>
+                  <div class="person-desc">Trưởng phòng thí nghiệm · Giáo sư AI, ĐH Warwick (UK) · Chuyên gia hàng đầu về Multi-Agent Systems &amp; Game Theory</div>
+                </div>
+                <div class="person">
+                  <div class="person-name">PGS.TS. Nguyễn Văn Vũ</div>
+                  <div class="person-desc">Khoa Công nghệ Thông tin, Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM</div>
+                </div>
+                <div class="person">
+                  <div class="person-name">TS. Châu Thành Đức</div>
+                  <div class="person-desc">Khoa Công nghệ Thông tin, Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM</div>
+                </div>
+                <div class="person">
+                  <div class="person-name">TS. Lê Trung Hoàng</div>
+                  <div class="person-desc">Khoa Công nghệ Thông tin, Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="people-card" style="margin-bottom:0;">
+              <h4>Môi trường làm việc</h4>
+              <div class="person-row">
+                <div class="person">
+                  <div class="person-name">💡 Đồng hành 1-on-1</div>
+                  <div class="person-desc">Mỗi bạn được kèm cặp trực tiếp bởi các anh chị và thầy cô có kinh nghiệm bài báo A*.</div>
+                </div>
+                <div class="person">
+                  <div class="person-name">⚡ Cụm tính toán GPU</div>
+                  <div class="person-desc">Hỗ trợ tài nguyên máy chủ GPU cho các đề tài nghiên cứu phù hợp, không lo thiếu phần cứng.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Research Pillars Section -->
+    <div class="section-alt">
+      <div class="shell">
+        <section class="section" id="research">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">02 / TRỤ CỘT NGHIÊN CỨU</span>
+              <h2>Những bài toán lớn<br>chúng mình cùng giải quyết.</h2>
+            </div>
+            <p>
+              Các hướng nghiên cứu tại lab đều hướng tới sự giao thoa giữa lý thuyết toán học vững chắc và giải pháp thực tế giải quyết các thách thức then chốt của AI hiện đại.
+            </p>
+          </div>
+
+          <div class="research-grid">
+            <!-- Pillar 1 -->
+            <article class="research-card">
+              <div>
+                <span class="card-num">01 / MULTI-AGENT SYSTEMS</span>
+                <h3>Hệ thống Đa tác tử &amp; Lý thuyết Trò chơi</h3>
+                <p>
+                  Nghiên cứu cơ chế phối hợp, đàm phán và ra quyết định chiến lược giữa nhiều tác tử AI tự trị. Ứng dụng Game Theory, Multi-Agent Reinforcement Learning (MARL) và mô phỏng tương tác xã hội bằng các LLM agents.
+                </p>
+              </div>
+              <div class="research-tags">
+                <span>Multi-Agent RL</span>
+                <span>Game Theory</span>
+                <span>LLM Society</span>
+                <span>NeurIPS / ICML / AAMAS</span>
+              </div>
+            </article>
+
+            <!-- Pillar 2 -->
+            <article class="research-card">
+              <div>
+                <span class="card-num">02 / ALIGNMENT &amp; SAFETY</span>
+                <h3>Căn chỉnh Văn hoá &amp; An toàn Mô hình</h3>
+                <p>
+                  Điều hướng và căn chỉnh các mô hình ngôn ngữ lớn (LLMs, VLMs) theo chuẩn mực văn hoá, đạo đức và an toàn của từng cộng đồng bản địa. Kiểm soát và phòng vệ jailbreak thông qua black-box API không cần can thiệp trọng số.
+                </p>
+              </div>
+              <div class="research-tags">
+                <span>Culture Alignment</span>
+                <span>AI Safety</span>
+                <span>API Steering</span>
+                <span>NeurIPS / ACL / EMNLP</span>
+              </div>
+            </article>
+
+            <!-- Pillar 3 -->
+            <article class="research-card">
+              <div>
+                <span class="card-num">03 / CONTINUAL &amp; RELIABLE LEARNING</span>
+                <h3>Học máy Tin cậy &amp; Thị giác Thế giới thực</h3>
+                <p>
+                  Giải quyết bài toán học liên tục (continual learning) chống quên tri thức (catastrophic forgetting), học trực tuyến (online learning) và thị giác máy tính bền bỉ trước sự trượt phân phối dữ liệu (distribution shift) ngoài tự nhiên.
+                </p>
+              </div>
+              <div class="research-tags">
+                <span>Continual Learning</span>
+                <span>Robust Vision</span>
+                <span>Online Learning</span>
+                <span>NeurIPS / CVPR / ICCV</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Research Lifecycle Box -->
+          <div class="workflow-box">
+            <div class="workflow-title">
+              <span>🔄</span> Vòng đời một công trình nghiên cứu tại Lab:
+            </div>
+            <div class="workflow-steps">
+              <div class="wf-step">
+                <span class="wf-num">BƯỚC 1</span>
+                <span class="wf-name">Đặt câu hỏi khoa học mới</span>
+              </div>
+              <div class="wf-step">
+                <span class="wf-num">BƯỚC 2</span>
+                <span class="wf-name">Đọc &amp; Tổng hợp tài liệu quốc tế</span>
+              </div>
+              <div class="wf-step">
+                <span class="wf-num">BƯỚC 3</span>
+                <span class="wf-name">Thiết kế phương pháp &amp; Lập trình</span>
+              </div>
+              <div class="wf-step">
+                <span class="wf-num">BƯỚC 4</span>
+                <span class="wf-name">Thực nghiệm trên cụm GPU</span>
+              </div>
+              <div class="wf-step">
+                <span class="wf-num">BƯỚC 5</span>
+                <span class="wf-name">Viết bài báo chuẩn LaTeX &amp; Story</span>
+              </div>
+              <div class="wf-step">
+                <span class="wf-num">BƯỚC 6</span>
+                <span class="wf-name">Nộp &amp; Bảo vệ tại Hội nghị A*</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Benefits / What you get Section -->
+    <div class="shell">
+      <section class="section" id="benefits">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">03 / GIÁ TRỊ &amp; QUYỀN LỢI</span>
+            <h2>Bạn sẽ nhận được gì<br>khi trở thành thành viên?</h2>
+          </div>
+          <p>
+            Tham gia lab là cơ hội để bạn chuyển mình từ một người "học code" đơn thuần thành một nhà nghiên cứu khoa học có tư duy độc lập và công bố quốc tế.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">🧠</div>
+            <h3>Tư duy Nghiên cứu Chuẩn mực</h3>
+            <p>Học cách đọc bài báo có phản biện, nhận diện ranh giới tri thức, xây dựng giả thuyết khoa học và thiết kế kiểm chứng loại bỏ thiên lệch dữ liệu.</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">🤝</div>
+            <h3>Kèm cặp 1-on-1 Chuyên sâu</h3>
+            <p>Họp sync tiến độ hàng tuần cùng mentor và giảng viên, gỡ rối thuật toán, code review và định hình phong cách viết bài báo khoa học chuẩn mực.</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">⚡</div>
+            <h3>Hỗ trợ Tài nguyên GPU</h3>
+            <p>Được tạo điều kiện tiếp cận các cụm tính toán GPU mạnh mẽ để huấn luyện mô hình và chạy thực nghiệm mà không bị giới hạn phần cứng cá nhân.</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">📄</div>
+            <h3>Bài báo Khoa học &amp; Danh tiếng</h3>
+            <p>Được đứng tên tác giả trong các công trình bạn đóng góp thực chất, hướng tới các hội nghị hàng đầu thế giới (NeurIPS, ICML, ICLR, ACL, CVPR...).</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">🎓</div>
+            <h3>Bệ phóng PhD &amp; R&amp;D Toàn cầu</h3>
+            <p>Chuẩn bị hồ sơ (dossier), thư giới thiệu uy tín từ các giáo sư quốc tế để săn học bổng Tiến sĩ toàn phần tại Mỹ/Châu Âu/Úc hoặc ứng tuyển kỹ sư R&amp;D.</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">🌐</div>
+            <h3>Linh hoạt Online-First</h3>
+            <p>Môi trường làm việc từ xa tôn trọng thời khóa biểu của sinh viên. Miễn bạn cam kết kỷ luật, tự giác và hoàn thành mục tiêu nghiên cứu đã đề ra.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Interactive Fit Quiz Section -->
+    <div class="section-alt">
+      <div class="shell">
+        <section class="section" id="quiz">
+          <div class="section-head-full" style="text-align: center; margin: 0 auto 40px;">
+            <span class="eyebrow">04 / TỰ ĐÁNH GIÁ</span>
+            <h2>Bạn có phù hợp với Lab không?</h2>
+            <p>Trả lời nhanh 4 câu hỏi trắc nghiệm dưới đây để biết bạn đã sẵn sàng tham gia nghiên cứu cùng chúng mình chưa nhé!</p>
+          </div>
+
+          <div class="quiz-card">
+            <!-- Q1 -->
+            <div class="quiz-question" data-q="1">
+              <div class="quiz-q-title">1. Bạn đã từng có bài báo khoa học hay kinh nghiệm nghiên cứu AI chưa?</div>
+              <div class="quiz-options">
+                <button class="quiz-btn" data-val="no">A. Mình chưa có, chỉ mới tự học hoặc làm bài tập môn học</button>
+                <button class="quiz-btn" data-val="yes">B. Mình đã từng tham gia nghiên cứu hoặc có bài báo nhỏ</button>
+              </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="quiz-question" data-q="2">
+              <div class="quiz-q-title">2. Bạn có thể dành bao nhiêu thời gian mỗi tuần cho công việc nghiên cứu?</div>
+              <div class="quiz-options">
+                <button class="quiz-btn" data-val="low">A. Dưới 10 giờ / tuần (do lịch học quá bận)</button>
+                <button class="quiz-btn" data-val="good">B. Khoảng 15 – 20 giờ / tuần (hoặc hơn khi vào đợt)</button>
+              </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="quiz-question" data-q="3">
+              <div class="quiz-q-title">3. Khi gặp một bài toán thuật toán hóc búa hoặc kết quả mô hình bị lỗi, bạn thường:</div>
+              <div class="quiz-options">
+                <button class="quiz-btn" data-val="giveup">A. Dễ nản lòng và muốn đổi ngay sang bài toán khác</button>
+                <button class="quiz-btn" data-val="persist">B. Đọc lại paper, debug kỹ, ghi chép và trao đổi cùng đồng đội</button>
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="quiz-question" data-q="4">
+              <div class="quiz-q-title">4. Khả năng đọc hiểu tài liệu và bài báo tiếng Anh chuyên ngành của bạn:</div>
+              <div class="quiz-options">
+                <button class="quiz-btn" data-val="ok">A. Đọc được với sự trợ giúp của từ điển hoặc công cụ dịch/AI</button>
+                <button class="quiz-btn" data-val="good">B. Tự tin đọc hiểu cấu trúc và phương pháp của bài báo quốc tế</button>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 24px;">
+              <button id="evaluateQuizBtn" class="pill pill-accent" style="padding: 14px 32px; font-size: 15px;">Xem Đánh giá Độ phù hợp 🎯</button>
+            </div>
+
+            <div id="quizResult" class="quiz-result">
+              <div class="quiz-result-title" id="quizResultTitle">✨ Kết quả đánh giá của bạn:</div>
+              <div class="quiz-result-text" id="quizResultText">Vui lòng chọn đáp án cho cả 4 câu hỏi bên trên để nhận đánh giá chi tiết!</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Recruitment Process Section -->
+    <div class="shell">
+      <section class="section" id="process">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">05 / HÀNH TRÌNH 4 VÒNG</span>
+            <h2>Quy trình tuyển chọn<br>minh bạch &amp; văn minh.</h2>
+          </div>
+          <p>
+            Quy trình được thiết kế để tìm hiểu cách bạn tư duy, giải quyết vấn đề và tinh thần học hỏi, hoàn toàn không đánh đố hay yêu cầu thành tích sẵn có.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <span class="step-badge">VÒNG 1</span>
+            <h3>Nộp Đơn &amp; CV</h3>
+            <p>
+              Điền form đăng ký, chia sẻ về nguyện vọng, định hướng và tải lên CV dạng PDF. Giới thiệu những gì bạn đã học, bài tập môn học hoặc dự án bạn từng làm.
+            </p>
+            <div class="step-meta">
+              ⏱ Khoảng 10 phút điền form<br>
+              📌 Không bắt buộc có bài báo
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <span class="step-badge">VÒNG 2</span>
+            <h3>Kiểm tra AI Cơ bản</h3>
+            <p>
+              Bài kiểm tra trực tuyến 30 phút gồm trắc nghiệm và câu hỏi mở về các khái niệm học máy, đánh giá mô hình, baseline và rò rỉ dữ liệu. Được dùng tài liệu và AI nếu khai báo rõ.
+            </p>
+            <div class="step-meta">
+              ⏱ 30 phút làm bài linh hoạt<br>
+              📌 Chấm ẩn danh theo mã ứng viên
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <span class="step-badge">VÒNG 3</span>
+            <h3>Phỏng vấn Chuyên môn</h3>
+            <p>
+              Buổi trò chuyện 35 - 45 phút cùng ban tuyển. Thảo luận về dự án bạn từng làm, bài tập môn học bạn tâm đắc, cách bạn phối hợp nhóm và trả lời thắc mắc của bạn về lab.
+            </p>
+            <div class="step-meta">
+              ⏱ 35 – 45 phút online<br>
+              📌 Không dùng AI/tài liệu trực tiếp
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card">
+            <span class="step-badge">VÒNG 4</span>
+            <h3>Mini Proposal</h3>
+            <p>
+              Viết đề xuất nghiên cứu ngắn tối đa 2 trang PDF cho một bài toán nhỏ. Trình bày 10 phút và hỏi đáp 10 phút. Đánh giá cách đặt vấn đề và thiết kế thực nghiệm, <strong>không cần chạy mô hình</strong>.
+            </p>
+            <div class="step-meta">
+              ⏱ ~3 giờ thực làm trong 5 ngày<br>
+              📌 Không yêu cầu GPU hay số liệu giả
+            </div>
+          </div>
+        </div>
+
+        <!-- Research CV Guide for Undergraduates Box -->
+        <div class="cv-guide-box" id="cv-guide">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <div>
+              <span class="eyebrow">CẨM NANG ỨNG TUYỂN</span>
+              <h3 style="font-size:24px; margin:6px 0 0; font-weight:800;">Chưa có bài báo thì viết CV nghiên cứu thế nào?</h3>
+            </div>
+            <span class="badge" style="font-size:13px;">Dành riêng cho sinh viên đại học</span>
+          </div>
+
+          <p style="color:var(--ink-secondary); margin-top:14px; font-size:15px;">
+            Rất nhiều bạn sinh viên ngần ngại vì nghĩ rằng vào lab AI phải có bài báo sẵn. Thực tế, lab ưu tiên tìm kiếm tiềm năng tư duy và sự chỉn chu. Dưới đây là 3 khối nội dung quan trọng nhất bạn nên đưa vào CV:
+          </p>
+
+          <div class="cv-guide-grid">
+            <div class="cv-col">
+              <h4>1. Môn học &amp; Nền tảng (Coursework)</h4>
+              <ul>
+                <li>Điểm số nổi bật các môn Toán: Đại số tuyến tính, Giải tích, Xác suất thống kê.</li>
+                <li>Môn lập trình: Cấu trúc dữ liệu &amp; giải thuật, Lập trình hướng đối tượng, Python.</li>
+                <li>Các môn chuyên ngành: Học máy (Machine Learning), Trí tuệ nhân tạo, Thị giác máy tính...</li>
+              </ul>
+            </div>
+
+            <div class="cv-col">
+              <h4>2. Đồ án môn học &amp; Tự học (Projects)</h4>
+              <ul>
+                <li>Mô tả rõ bài toán (Problem Statement) và dữ liệu sử dụng.</li>
+                <li>Phương pháp bạn cài đặt (Baseline, Model architecture, Loss function).</li>
+                <li>Thước đo đánh giá (Accuracy, F1, Loss) và <strong>bài học rút ra khi mô hình gặp lỗi</strong>.</li>
+                <li>Kèm link GitHub mã nguồn sạch sẽ nếu có.</li>
+              </ul>
+            </div>
+
+            <div class="cv-col">
+              <h4>3. Kỹ năng &amp; Đam mê (Interests)</h4>
+              <ul>
+                <li>Công cụ thành thạo: Python, PyTorch / TensorFlow, NumPy, pandas, Git, LaTeX.</li>
+                <li>Khả năng đọc hiểu tài liệu tiếng Anh (kèm chứng chỉ TOEIC / IELTS nếu có).</li>
+                <li>Nêu rõ 1 - 2 hướng nghiên cứu của lab mà bạn tò mò và muốn đào sâu nhất.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="section-alt">
+      <div class="shell">
+        <section class="section" id="faq">
+          <div class="section-head-full" style="text-align: center; margin: 0 auto 40px;">
+            <span class="eyebrow">06 / CÂU HỎI THƯỜNG GẶP</span>
+            <h2>Giải đáp mọi băn khoăn của bạn.</h2>
+            <p>Nếu bạn có thêm câu hỏi chưa được giải đáp ở đây, đừng ngần ngại gửi email cho nhóm nhé!</p>
+          </div>
+
+          <div class="faq-container">
+            <details>
+              <summary>Sinh viên năm nhất hoặc năm hai chưa học nhiều môn chuyên ngành có nộp được không?</summary>
+              <p>
+                Hoàn toàn được! Lab hoan nghênh các bạn sinh viên từ năm 1 đến năm 4. Với các bạn năm 1-2, nhóm đánh giá cao nền tảng toán cơ bản vững, khả năng lập trình tự học và tinh thần sẵn sàng tiếp thu cái mới.
+              </p>
+            </details>
+
+            <details>
+              <summary>Mình học trường khác (ngoài HCMUS) có thể ứng tuyển không?</summary>
+              <p>
+                Có. Mặc dù lab trực thuộc FIT - HCMUS, chúng mình luôn chào đón các bạn sinh viên có đam mê nghiên cứu từ các trường thành viên ĐHQG-HCM và các trường đại học lân cận.
+              </p>
+            </details>
+
+            <details>
+              <summary>Làm việc online-first thì lịch sinh hoạt và trao đổi như thế nào?</summary>
+              <p>
+                Lab làm việc chủ yếu qua các kênh trao đổi trực tuyến (Google Meet, Telegram/Slack, Overleaf, GitHub). Mỗi tuần có buổi họp lab chung và buổi sync 1-on-1 định kỳ với mentor. Lịch họp được sắp xếp linh hoạt để không trùng lịch thi cử của bạn.
+              </p>
+            </details>
+
+            <details>
+              <summary>Làm bài kiểm tra kiến thức và Mini Proposal có được dùng AI (ChatGPT, Claude...) không?</summary>
+              <p>
+                Được phép dùng tài liệu và các công cụ AI hỗ trợ, NHƯNG bạn phải có mục khai báo rõ ràng đã dùng công cụ gì, cho câu nào và hỗ trợ ra sao. Quan trọng nhất: ở các buổi phỏng vấn trực tiếp, bạn phải tự giải thích được bản chất kỹ thuật của phương pháp mà không dựa vào AI.
+              </p>
+            </details>
+
+            <details>
+              <summary>Mình không có máy tính cấu hình mạnh / card GPU rời thì có nghiên cứu được không?</summary>
+              <p>
+                Hoàn toàn được. Ở vòng tuyển chọn (Mini Proposal), lab không yêu cầu bạn huấn luyện mô hình hay chạy thực nghiệm. Khi vào lab, với các đề tài nghiên cứu phù hợp, lab sẽ hỗ trợ cấp quyền truy cập tài nguyên cụm máy chủ GPU.
+              </p>
+            </details>
+
+            <details>
+              <summary>Tham gia lab có đảm bảo sẽ có bài báo, học bổng hay suất học Tiến sĩ không?</summary>
+              <p>
+                Việc tham gia lab là môi trường rèn luyện học thuật thực chiến, KHÔNG phải cam kết tự động về học bổng, việc làm hay bài báo. Tuy nhiên, nếu bạn nỗ lực và đóng góp thực chất vào các công trình khoa học, bạn sẽ là đồng tác giả của bài báo và được giảng viên hỗ trợ viết thư giới thiệu uy tín để apply học bổng quốc tế.
+              </p>
+            </details>
+
+            <details>
+              <summary>Hồ sơ và thông tin cá nhân của ứng viên được bảo mật ra sao?</summary>
+              <p>
+                Dữ liệu đăng ký và CV của bạn chỉ được dùng cho mục đích xét tuyển đợt này, được lưu trữ bảo mật trên Drive có kiểm soát phân quyền của ban tuyển, và sẽ được hủy/xóa theo đúng quy định sau khi kết thúc đợt tuyển.
+              </p>
+            </details>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Apply Call to Action Section -->
+    <div class="shell">
+      <section class="apply-banner" id="apply">
+        <div>
+          <span class="eyebrow" style="color:#1d4d2b;">07 / BẮT ĐẦU HÀNH TRÌNH</span>
+          <h2>Sẵn sàng cùng Lab kiến tạo những công trình AI đỉnh cao?</h2>
+          <p>
+            Đừng để sự ngần ngại giữ chân bạn. Hãy gửi đơn đăng ký và bắt đầu cuộc trò chuyện cùng chúng mình ngay hôm nay!
+          </p>
+          <div style="margin-top:20px;">
+            <span class="badge" style="background:#ffffff; color:#1e5a3a; font-weight:800;">
+              📌 Hạn nhận đơn: Đợt tuyển đang mở · Số lượng: 05 thành viên
+            </span>
+          </div>
+        </div>
+
+        <div class="apply-actions">
+          <a class="pill" href="https://docs.google.com/forms/d/1w_Xi0H-PpbrHX8kz4wdaWaZwPtg9k6QitK-RzBbMNVY/edit" target="_blank" rel="noopener">
+            Điền Form Đăng ký Ngay ↗
+          </a>
+
+          <div class="apply-meta">
+            Nếu bạn không thể đăng nhập Google để nộp CV qua Form, vui lòng gửi CV trực tiếp qua email:
+            <br>
+            <strong style="font-size:14px; color:var(--ink);">23122041@student.hcmus.edu.vn</strong>
+            <br>
+            <button class="copy-btn" id="copyEmailBtn">📋 Sao chép địa chỉ email</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="shell">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>MULTI-AGENT &amp; TRUSTWORTHY AI LABORATORY</h4>
+          <p style="color:var(--muted); font-size:13px; line-height:1.6; max-width:440px;">
+            Phòng thí nghiệm Trí tuệ nhân tạo đa tác tử và Tin cậy<br>
+            Khoa Công nghệ Thông tin, Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM.<br>
+            Trưởng phòng: GS.TS. Trần Thanh Long.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Liên kết nhanh</h5>
+          <ul>
+            <li><a href="#about">Về phòng thí nghiệm</a></li>
+            <li><a href="#research">3 Trụ cột nghiên cứu</a></li>
+            <li><a href="#process">Quy trình tuyển 4 vòng</a></li>
+            <li><a href="#quiz">Bài trắc nghiệm tự đánh giá</a></li>
+            <li><a href="#cv-guide">Cẩm nang chuẩn bị CV</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Liên hệ &amp; Pháp lý</h5>
+          <ul>
+            <li>Email: <a href="mailto:23122041@student.hcmus.edu.vn">23122041@student.hcmus.edu.vn</a></li>
+            <li>Địa chỉ: 227 Nguyễn Văn Cừ, Quận 5, TP.HCM</li>
+            <li>Bảo vệ dữ liệu cá nhân theo quy định pháp luật</li>
+            <li>Học hỏi cùng nhau. Nghiên cứu cùng nhau.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Multi-Agent &amp; Trustworthy AI Laboratory. All rights reserved.</div>
+        <div>Faculty of Information Technology · University of Science, VNU-HCM</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // Theme Toggle Logic
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      if (next === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      localStorage.setItem('theme', next);
+    });
+
+    // Copy Email logic
+    const copyBtn = document.getElementById('copyEmailBtn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText('23122041@student.hcmus.edu.vn').then(() => {
+          copyBtn.textContent = '✅ Đã sao chép email!';
+          setTimeout(() => {
+            copyBtn.textContent = '📋 Sao chép địa chỉ email';
+          }, 2500);
+        });
+      });
+    }
+
+    // Interactive Quiz Logic
+    const quizButtons = document.querySelectorAll('.quiz-btn');
+    const answers = {};
+
+    quizButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const question = btn.closest('.quiz-question').dataset.q;
+        btn.closest('.quiz-question').querySelectorAll('.quiz-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        answers[question] = btn.dataset.val;
+      });
+    });
+
+    const evalBtn = document.getElementById('evaluateQuizBtn');
+    const quizResult = document.getElementById('quizResult');
+    const quizResultTitle = document.getElementById('quizResultTitle');
+    const quizResultText = document.getElementById('quizResultText');
+
+    if (evalBtn) {
+      evalBtn.addEventListener('click', () => {
+        const totalSelected = Object.keys(answers).length;
+        quizResult.style.display = 'block';
+
+        if (totalSelected < 4) {
+          quizResultTitle.textContent = '⚠️ Hãy chọn đáp án cho cả 4 câu hỏi nhé!';
+          quizResultText.textContent = `Bạn mới chọn ${totalSelected}/4 câu. Hãy chọn nốt các câu còn lại để nhận lời khuyên chính xác nhất.`;
+          return;
+        }
+
+        // Logic recommendation
+        let advice = '';
+        if (answers['1'] === 'no') {
+          advice += '• <strong>Về kinh nghiệm:</strong> Rất nhiều sinh viên tại lab bắt đầu từ con số 0 về bài báo. Đừng lo lắng, lab tìm kiếm tư duy và sự kiên trì của bạn!<br>';
+        } else {
+          advice += '• <strong>Về kinh nghiệm:</strong> Nền tảng dự án/bài báo sẵn có sẽ là một điểm cộng giúp bạn bắt nhịp rất nhanh với các dự án hội nghị A*.<br>';
+        }
+
+        if (answers['2'] === 'low') {
+          advice += '• <strong>Về thời gian:</strong> Nghiên cứu AI đỉnh cao cần sự tập trung cao độ (khoảng 15-20h/tuần). Nếu lịch học quá bận, bạn nên cân đối thời gian trước khi bắt đầu nhé.<br>';
+        } else {
+          advice += '• <strong>Về thời gian:</strong> Quỹ thời gian 15-20h/tuần là mức lý tưởng để bạn theo đuổi một bài báo quốc tế trọn vẹn.<br>';
+        }
+
+        if (answers['3'] === 'persist') {
+          advice += '• <strong>Về tinh thần:</strong> Tính kiên nhẫn và kỹ năng debug, đọc tài liệu là phẩm chất số 1 của một nhà nghiên cứu xuất sắc.<br>';
+        }
+
+        advice += '• <strong>Lời khuyên:</strong> Bạn hoàn toàn đủ tiềm năng để tham gia đợt tuyển này! Hãy mạnh dạn gửi hồ sơ và CV để trao đổi cùng lab nhé.';
+
+        quizResultTitle.textContent = '🎉 Bạn rất phù hợp để ứng tuyển vào Lab!';
+        quizResultText.innerHTML = advice;
+      });
+    }
+  </script>
+</body>
+</html>
