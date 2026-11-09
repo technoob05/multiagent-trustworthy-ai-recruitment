@@ -24,8 +24,8 @@
 - **Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery** (NeurIPS 2026 Main Track, [arXiv:2605.11654](https://arxiv.org/abs/2605.11654)).
 - **Payoff Scaling Shapes Cooperation in LLM Agents Across Languages** (Royal Society Interface Focus, [arXiv:2601.19082](https://arxiv.org/abs/2601.19082)).
 - **The Mouse vs. AI Robust Foraging Competition** (1st Place Champion across both tracks, NeurIPS 2025 Competition Track; Team HCMUS_TheFangs, technical report [arXiv:2602.00982](https://arxiv.org/abs/2602.00982), competition site: [https://mouse-vs-ai.github.io/](https://mouse-vs-ai.github.io/)).
-- **Unlocking Compositional Generalization in Continual Few-Shot Learning** (NeurIPS 2026 Main Track).
-- **MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound** (NeurIPS 2026 Main Track).
+- **Unlocking Compositional Generalization in Continual Few-Shot Learning** (NeurIPS 2026 Main Track, [arXiv:2605.11710](https://arxiv.org/abs/2605.11710)).
+- **MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound** (NeurIPS 2026 Main Track, [arXiv:2605.11617](https://arxiv.org/abs/2605.11617)).
 - **Visual Robustness and Neural Alignment in a Shared Foraging Task: The Mouse vs. AI Benchmark** (NeurIPS 2026 Datasets and Benchmarks Track).
 
 ## What You Will Gain
