@@ -50,51 +50,53 @@
 
   <style>
     :root {
-      --bg: #f5f7f2;
+      --bg: #ffffff;
       --surface: #ffffff;
-      --surface-2: #e9eee4;
+      --surface-2: #f6f7f8;
       --surface-card: #ffffff;
-      --ink: #0d2627;
-      --ink-secondary: #355350;
-      --muted: #53726f;
-      --line: #d1ded2;
-      --line-subtle: #e3ece4;
-      --primary: #1e5a3a;
-      --primary-hover: #15422a;
-      --accent-lime: #c8f07d;
-      --accent-lime-dark: #284412;
-      --badge-bg: #e2f4ce;
-      --badge-text: #1d4d2b;
-      --hero-sub: #3d7650;
-      --shadow-sm: 0 2px 8px rgba(13, 38, 39, 0.05);
-      --shadow-md: 0 10px 30px rgba(13, 38, 39, 0.08);
-      --shadow-lg: 0 20px 50px rgba(13, 38, 39, 0.12);
-      --radius: 12px;
-      --radius-sm: 6px;
+      --ink: #111113;
+      --ink-secondary: #3b3b42;
+      --muted: #6e6e78;
+      --line: #e3e3e7;
+      --line-subtle: #f0f0f4;
+      --primary: #111113;
+      --primary-hover: #27272a;
+      --accent-lime: #111113;
+      --accent-lime-dark: #ffffff;
+      --badge-bg: #f4f4f6;
+      --badge-text: #18181b;
+      --hero-sub: #4b4b54;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+      --radius: 8px;
+      --radius-sm: 4px;
       --radius-pill: 999px;
       --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-serif: "Charter", "Bitstream Charter", "Georgia", "Times New Roman", serif;
+      --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     }
 
     [data-theme="dark"] {
-      --bg: #0c1a1b;
-      --surface: #122425;
-      --surface-2: #182e2f;
-      --surface-card: #152b2c;
-      --ink: #eaf4ed;
-      --ink-secondary: #b5cdc2;
-      --muted: #8ba89c;
-      --line: #263d3c;
-      --line-subtle: #1c3232;
-      --primary: #34a86b;
-      --primary-hover: #42bd7c;
-      --accent-lime: #a3ea42;
-      --accent-lime-dark: #081d05;
-      --badge-bg: #1c3829;
-      --badge-text: #a8efb5;
-      --hero-sub: #5fc489;
-      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
-      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
+      --bg: #0b0b0e;
+      --surface: #121216;
+      --surface-2: #19191e;
+      --surface-card: #121216;
+      --ink: #f4f4f6;
+      --ink-secondary: #a1a1aa;
+      --muted: #71717a;
+      --line: #27272e;
+      --line-subtle: #1c1c22;
+      --primary: #f4f4f6;
+      --primary-hover: #ffffff;
+      --accent-lime: #f4f4f6;
+      --accent-lime-dark: #0b0b0e;
+      --badge-bg: #1c1c22;
+      --badge-text: #f4f4f6;
+      --hero-sub: #a1a1aa;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+      --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.8);
     }
 
     * { box-sizing: border-box; }
@@ -125,14 +127,14 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(245, 247, 242, 0.92);
+      background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--line);
       transition: background 0.25s ease, border-color 0.25s ease;
     }
     [data-theme="dark"] header {
-      background: rgba(12, 26, 27, 0.92);
+      background: rgba(11, 11, 14, 0.94);
     }
 
     nav {
@@ -157,7 +159,12 @@
       font-weight: 850;
       color: var(--ink);
     }
-    .brand-title span { color: var(--primary); }
+    .brand-title span {
+      color: var(--muted);
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+    }
     .brand-sub {
       font-size: 11px;
       font-weight: 600;
@@ -193,7 +200,7 @@
       align-items: center;
       justify-content: center;
       background: var(--ink);
-      color: #ffffff;
+      color: var(--bg);
       border-radius: var(--radius-pill);
       padding: 10px 20px;
       font-size: 13px;
@@ -203,17 +210,17 @@
       border: 1px solid transparent;
     }
     [data-theme="dark"] .pill {
-      background: #185834;
-      color: #ffffff;
+      background: var(--ink);
+      color: var(--bg);
     }
     .pill:hover {
-      background: var(--primary);
+      background: var(--primary-hover);
       transform: translateY(-1px);
       box-shadow: var(--shadow-sm);
     }
     [data-theme="dark"] .pill:hover {
-      background: #206d42;
-      color: #ffffff;
+      background: #ffffff;
+      color: #0b0b0e;
     }
 
     .pill-secondary, [data-theme="dark"] .pill-secondary {
@@ -224,16 +231,18 @@
     .pill-secondary:hover, [data-theme="dark"] .pill-secondary:hover {
       background: var(--surface-2) !important;
       color: var(--ink) !important;
+      border-color: var(--ink) !important;
     }
 
     .pill-accent, [data-theme="dark"] .pill-accent {
-      background: var(--accent-lime) !important;
-      color: #081d05 !important;
-      font-weight: 800;
+      background: var(--ink) !important;
+      color: var(--bg) !important;
+      font-weight: 750;
+      border: 1px solid var(--ink) !important;
     }
     .pill-accent:hover, [data-theme="dark"] .pill-accent:hover {
-      background: #bbf062 !important;
-      color: #081d05 !important;
+      background: var(--primary-hover) !important;
+      color: var(--bg) !important;
     }
 
     .theme-toggle {
@@ -257,20 +266,19 @@
 
     .eyebrow {
       font-size: 11px;
-      letter-spacing: 0.16em;
-      font-weight: 800;
-      color: var(--primary);
+      letter-spacing: 0.14em;
+      font-weight: 750;
+      color: var(--muted);
       text-transform: uppercase;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
     }
     .eyebrow::before {
       content: "";
-      width: 8px;
-      height: 8px;
-      background: var(--accent-lime);
-      border: 2px solid var(--primary);
+      width: 6px;
+      height: 6px;
+      background: var(--ink);
       border-radius: 50%;
       display: inline-block;
     }
@@ -281,11 +289,11 @@
       gap: 6px;
       background: var(--badge-bg);
       color: var(--badge-text);
-      padding: 6px 12px;
+      padding: 5px 12px;
       border-radius: var(--radius-pill);
       font-size: 12px;
-      font-weight: 700;
-      border: 1px solid rgba(30, 90, 58, 0.15);
+      font-weight: 650;
+      border: 1px solid var(--line);
     }
 
     /* Hero Section */
@@ -313,11 +321,12 @@
       font-weight: 800;
     }
     .hero h1 em {
-      color: var(--hero-sub);
-      font-style: normal;
-      background: linear-gradient(135deg, var(--primary) 0%, #3d7650 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--ink);
+      font-style: italic;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      background: none;
+      -webkit-text-fill-color: initial;
     }
 
     .lead {
@@ -631,31 +640,85 @@
       line-height: 1.4;
     }
 
-    /* Publications Grid */
+    /* Publications Grid & Academic Showcase */
     .pub-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: 24px;
     }
     .pub-card {
       background: var(--surface-card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 24px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.2s ease;
+      overflow: hidden;
+      transition: all 0.22s ease;
       box-shadow: var(--shadow-sm);
     }
     .pub-card:hover {
-      border-color: var(--primary);
+      border-color: var(--ink);
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
     }
     .pub-card-award {
-      border-color: var(--primary);
-      background: linear-gradient(to bottom right, var(--surface-card), var(--surface-2));
+      border-color: var(--line);
+    }
+    .pub-thumb-wrap {
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      position: relative;
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--line);
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .pub-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.3s ease;
+      display: block;
+      background: #ffffff;
+    }
+    .pub-thumb-wrap:hover .pub-thumb-img {
+      transform: scale(1.03);
+    }
+    .pub-thumb-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    .pub-thumb-wrap:hover .pub-thumb-overlay,
+    .pub-thumb-wrap:focus-visible .pub-thumb-overlay {
+      opacity: 1;
+    }
+    .pub-thumb-btn-text {
+      background: #ffffff;
+      color: #09090b;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+    .pub-card-content {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
     }
     .pub-meta {
       display: flex;
@@ -665,44 +728,40 @@
       gap: 8px;
     }
     .pub-tag {
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       background: var(--badge-bg);
       color: var(--badge-text);
-      padding: 3px 9px;
+      padding: 4px 10px;
       border-radius: var(--radius-sm);
       border: 1px solid var(--line);
+      font-family: var(--font-mono, monospace);
     }
     .pub-tag-journal {
-      background: #eef2fa;
-      color: #1a428a;
-      border-color: #cbdcf8;
-    }
-    [data-theme="dark"] .pub-tag-journal {
-      background: #152642;
-      color: #9cc2ff;
-      border-color: #243d66;
+      background: var(--badge-bg);
+      color: var(--ink);
+      border-color: var(--line);
     }
     .pub-tag-award {
-      background: #fdf5d6;
-      color: #7a5806;
-      border-color: #f0de9e;
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
     }
     [data-theme="dark"] .pub-tag-award {
-      background: #332608;
-      color: #fad87a;
-      border-color: #5c450f;
+      background: #ffffff;
+      color: #0b0b0e;
+      border-color: #ffffff;
     }
     .pub-year {
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 600;
       color: var(--muted);
       font-family: var(--font-mono, monospace);
     }
     .pub-title {
-      font-size: 16px;
+      font-size: 16.5px;
       line-height: 1.45;
       font-weight: 750;
       margin: 0 0 10px;
@@ -713,27 +772,187 @@
       font-size: 14px;
       line-height: 1.6;
       color: var(--ink-secondary);
-      margin: 0 0 16px;
+      margin: 0 0 18px;
       flex-grow: 1;
     }
     .pub-links {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
-      padding-top: 12px;
+      padding-top: 14px;
       border-top: 1px solid var(--line-subtle);
+      align-items: center;
     }
     .pub-link {
       font-size: 13px;
       font-weight: 650;
-      color: var(--primary);
-      text-decoration: none;
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
       display: inline-flex;
       align-items: center;
       gap: 4px;
     }
     .pub-link:hover {
-      text-decoration: underline;
+      color: var(--muted);
+    }
+    .pub-btn-showcase {
+      font-size: 12px;
+      font-weight: 650;
+      color: var(--ink);
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-pill);
+      padding: 5px 12px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      font-family: inherit;
+      margin-left: auto;
+    }
+    .pub-btn-showcase:hover {
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+
+    /* Modal Showcase Lightbox */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.22s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-card {
+      background: var(--surface-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 960px;
+      max-height: 90vh;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+      position: relative;
+      transform: scale(0.96) translateY(8px);
+      transition: transform 0.22s ease;
+    }
+    .modal-overlay.active .modal-card {
+      transform: scale(1) translateY(0);
+    }
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.15s ease;
+      line-height: 1;
+    }
+    .modal-close:hover {
+      background: var(--ink);
+      color: var(--bg);
+    }
+    .modal-preview-col {
+      background: #ebebee;
+      border-right: 1px solid var(--line);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: auto;
+      max-height: 85vh;
+    }
+    [data-theme="dark"] .modal-preview-col {
+      background: #151518;
+    }
+    .modal-img-frame {
+      background: #ffffff;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      max-width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    .modal-img-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .modal-info-col {
+      padding: 34px 30px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+      max-height: 85vh;
+    }
+    .modal-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .modal-title {
+      font-size: 21px;
+      line-height: 1.35;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+    .modal-track {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-weight: 600;
+      font-family: var(--font-mono, monospace);
+    }
+    .modal-desc {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--ink-secondary);
+      margin: 0 0 20px;
+    }
+    .modal-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid var(--line-subtle);
+      align-items: center;
+    }
+    .modal-copy-status {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
     }
 
     /* Benefits Grid */
@@ -973,22 +1192,22 @@
 
     /* Apply CTA Banner */
     .apply-banner {
-      background: linear-gradient(135deg, #c8f07d 0%, #b3eb5c 100%);
-      color: #0d2627;
+      background: var(--surface-card);
+      color: var(--ink);
       border-radius: var(--radius);
       padding: 56px;
       display: grid;
       grid-template-columns: 1.3fr 0.7fr;
       gap: 40px;
       align-items: center;
-      box-shadow: var(--shadow-lg);
+      box-shadow: var(--shadow-sm);
       margin: 40px 0;
-      border: 1px solid rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--line);
     }
     [data-theme="dark"] .apply-banner {
-      background: linear-gradient(135deg, #183e28 0%, #112c1d 100%);
-      color: #eaf4ed;
-      border-color: var(--primary);
+      background: var(--surface-card);
+      color: var(--ink);
+      border-color: var(--line);
     }
     .apply-banner h2 {
       font-size: clamp(32px, 3.5vw, 46px);
@@ -996,15 +1215,16 @@
       margin: 8px 0 14px;
       line-height: 1.1;
       font-weight: 850;
+      color: var(--ink);
     }
     .apply-banner p {
       font-size: 17px;
       line-height: 1.6;
       max-width: 620px;
-      color: #244833;
+      color: var(--ink-secondary);
     }
     [data-theme="dark"] .apply-banner p {
-      color: #b5d5c0;
+      color: var(--ink-secondary);
     }
     .apply-actions {
       display: flex;
@@ -1015,20 +1235,30 @@
     .apply-actions .pill {
       font-size: 15px;
       padding: 16px 30px;
-      background: #0d2627;
-      color: #ffffff;
+      background: var(--ink);
+      color: var(--bg);
+      border: 1px solid var(--ink);
+    }
+    .apply-actions .pill:hover {
+      background: var(--muted);
+      border-color: var(--muted);
     }
     [data-theme="dark"] .apply-actions .pill {
-      background: var(--accent-lime);
-      color: var(--accent-lime-dark);
+      background: #ffffff;
+      color: #0b0b0e;
+      border-color: #ffffff;
+    }
+    [data-theme="dark"] .apply-actions .pill:hover {
+      background: #d4d4d8;
+      border-color: #d4d4d8;
     }
     .apply-meta {
       font-size: 13px;
-      color: #3b5f48;
+      color: var(--ink-secondary);
       line-height: 1.5;
     }
     [data-theme="dark"] .apply-meta {
-      color: #9cbda7;
+      color: var(--muted);
     }
 
     .copy-btn {
@@ -1141,6 +1371,20 @@
       .footer-top {
         grid-template-columns: 1fr;
         gap: 30px;
+      }
+      .modal-card {
+        grid-template-columns: 1fr;
+        max-height: 94vh;
+      }
+      .modal-preview-col {
+        max-height: 38vh;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        padding: 16px;
+      }
+      .modal-info-col {
+        max-height: 56vh;
+        padding: 22px 20px;
       }
     }
 
@@ -1436,107 +1680,170 @@
         <div class="pub-grid">
           <!-- DISCA -->
           <article class="pub-card">
-            <div class="pub-meta">
-              <span class="pub-tag">NeurIPS 2026 · Main Track</span>
-              <span class="pub-year">2026</span>
+            <div class="pub-thumb-wrap" onclick="openPaperModal('disca')" role="button" tabindex="0" aria-label="Xem trưng bày trang đầu bài báo DISCA">
+              <img class="pub-thumb-img" src="assets/papers/paper-disca.png" alt="Trang đầu bài báo DISCA" loading="lazy">
+              <div class="pub-thumb-overlay"><span class="pub-thumb-btn-text">Trưng bày trang đầu ↗</span></div>
             </div>
-            <h3 class="pub-title">Training-Free Cultural Alignment of Large Language Models via Persona Disagreement</h3>
-            <p class="pub-desc">
-              Căn chỉnh mô hình ngôn ngữ lớn (LLM) theo đa dạng góc nhìn văn hoá không cần can thiệp trọng số (training-free), khai thác sự bất đồng có cấu trúc giữa các nhân vật (persona).
-            </p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://arxiv.org/abs/2605.10843" target="_blank" rel="noopener">arXiv:2605.10843 ↗</a>
+            <div class="pub-card-content">
+              <div>
+                <div class="pub-meta">
+                  <span class="pub-tag">NeurIPS 2026 · Main Track</span>
+                  <span class="pub-year">2026</span>
+                </div>
+                <h3 class="pub-title">Training-Free Cultural Alignment of Large Language Models via Persona Disagreement</h3>
+                <p class="pub-desc">
+                  Căn chỉnh mô hình ngôn ngữ lớn (LLM) theo đa dạng góc nhìn văn hoá không cần can thiệp trọng số (training-free), khai thác sự bất đồng có cấu trúc giữa các nhân vật (persona).
+                </p>
+              </div>
+              <div class="pub-links">
+                <a class="pub-link" href="https://arxiv.org/abs/2605.10843" target="_blank" rel="noopener">arXiv:2605.10843 ↗</a>
+                <button class="pub-btn-showcase" onclick="openPaperModal('disca')">Xem trước ↗</button>
+              </div>
             </div>
           </article>
 
           <!-- SkyPart -->
           <article class="pub-card">
-            <div class="pub-meta">
-              <span class="pub-tag">NeurIPS 2026 · Main Track</span>
-              <span class="pub-year">2026</span>
+            <div class="pub-thumb-wrap" onclick="openPaperModal('skypart')" role="button" tabindex="0" aria-label="Xem trưng bày trang đầu bài báo SkyPart">
+              <img class="pub-thumb-img" src="assets/papers/paper-skypart.png" alt="Trang đầu bài báo SkyPart" loading="lazy">
+              <div class="pub-thumb-overlay"><span class="pub-thumb-btn-text">Trưng bày trang đầu ↗</span></div>
             </div>
-            <h3 class="pub-title">Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery</h3>
-            <p class="pub-desc">
-              Định vị địa lý chéo góc nhìn (mặt đất - vệ tinh) bền bỉ trước biến thiên thời tiết cực đoan bằng cơ chế khám phá bộ phận ngữ nghĩa dựa trên nguyên mẫu (prototype).
-            </p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://arxiv.org/abs/2605.11654" target="_blank" rel="noopener">arXiv:2605.11654 ↗</a>
+            <div class="pub-card-content">
+              <div>
+                <div class="pub-meta">
+                  <span class="pub-tag">NeurIPS 2026 · Main Track</span>
+                  <span class="pub-year">2026</span>
+                </div>
+                <h3 class="pub-title">Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery</h3>
+                <p class="pub-desc">
+                  Định vị địa lý chéo góc nhìn (mặt đất - vệ tinh) bền bỉ trước biến thiên thời tiết cực đoan bằng cơ chế khám phá bộ phận ngữ nghĩa dựa trên nguyên mẫu (prototype).
+                </p>
+              </div>
+              <div class="pub-links">
+                <a class="pub-link" href="https://arxiv.org/abs/2605.11654" target="_blank" rel="noopener">arXiv:2605.11654 ↗</a>
+                <button class="pub-btn-showcase" onclick="openPaperModal('skypart')">Xem trước ↗</button>
+              </div>
             </div>
           </article>
 
           <!-- Royal Society Interface Focus -->
           <article class="pub-card">
-            <div class="pub-meta">
-              <span class="pub-tag pub-tag-journal">Royal Society Interface Focus</span>
-              <span class="pub-year">2026</span>
+            <div class="pub-thumb-wrap" onclick="openPaperModal('payoff')" role="button" tabindex="0" aria-label="Xem trưng bày trang đầu bài báo Interface Focus">
+              <img class="pub-thumb-img" src="assets/papers/paper-payoff.png" alt="Trang đầu bài báo Interface Focus" loading="lazy">
+              <div class="pub-thumb-overlay"><span class="pub-thumb-btn-text">Trưng bày trang đầu ↗</span></div>
             </div>
-            <h3 class="pub-title">Payoff Scaling Shapes Cooperation in LLM Agents Across Languages</h3>
-            <p class="pub-desc">
-              Nghiên cứu thực nghiệm về sự tiến hoá và hợp tác giữa các tác tử mô hình ngôn ngữ lớn dưới các tỉ lệ ma trận chi trả và sự khác biệt ngôn ngữ trong lý thuyết trò chơi.
-            </p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://arxiv.org/abs/2601.19082" target="_blank" rel="noopener">arXiv:2601.19082 ↗</a>
+            <div class="pub-card-content">
+              <div>
+                <div class="pub-meta">
+                  <span class="pub-tag pub-tag-journal">Royal Society Interface Focus</span>
+                  <span class="pub-year">2026</span>
+                </div>
+                <h3 class="pub-title">Payoff Scaling Shapes Cooperation in LLM Agents Across Languages</h3>
+                <p class="pub-desc">
+                  Nghiên cứu thực nghiệm về sự tiến hoá và hợp tác giữa các tác tử mô hình ngôn ngữ lớn dưới các tỉ lệ ma trận chi trả và sự khác biệt ngôn ngữ trong lý thuyết trò chơi.
+                </p>
+              </div>
+              <div class="pub-links">
+                <a class="pub-link" href="https://arxiv.org/abs/2601.19082" target="_blank" rel="noopener">arXiv:2601.19082 ↗</a>
+                <button class="pub-btn-showcase" onclick="openPaperModal('payoff')">Xem trước ↗</button>
+              </div>
             </div>
           </article>
 
           <!-- NeurIPS 2025 Competition Winner -->
           <article class="pub-card pub-card-award">
-            <div class="pub-meta">
-              <span class="pub-tag pub-tag-award">NeurIPS 2025 · Quán quân 1st Place</span>
-              <span class="pub-year">2025</span>
+            <div class="pub-thumb-wrap" onclick="openPaperModal('award')" role="button" tabindex="0" aria-label="Xem trưng bày chứng nhận Quán quân NeurIPS 2025">
+              <img class="pub-thumb-img" src="assets/papers/award-mouse-vs-ai.png" alt="Chứng nhận Quán quân NeurIPS 2025 Mouse vs AI" loading="lazy">
+              <div class="pub-thumb-overlay"><span class="pub-thumb-btn-text">Trưng bày thành tích ↗</span></div>
             </div>
-            <h3 class="pub-title">The Mouse vs. AI Robust Foraging Competition (1st Place, Cả hai bảng đấu)</h3>
-            <p class="pub-desc">
-              Đội HCMUS_TheFangs giành Quán quân cả hai bảng đấu của cuộc thi NeurIPS 2025 về thị giác máy tính bền bỉ và hành vi thích nghi trong tác vụ foraging sinh học.
-            </p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://mouse-vs-ai.github.io/" target="_blank" rel="noopener">Trang cuộc thi ↗</a>
-              <a class="pub-link" href="https://arxiv.org/abs/2602.00982" target="_blank" rel="noopener">arXiv:2602.00982 ↗</a>
+            <div class="pub-card-content">
+              <div>
+                <div class="pub-meta">
+                  <span class="pub-tag pub-tag-award">NeurIPS 2025 · Quán quân 1st Place</span>
+                  <span class="pub-year">2025</span>
+                </div>
+                <h3 class="pub-title">The Mouse vs. AI Robust Foraging Competition (1st Place, Cả hai bảng đấu)</h3>
+                <p class="pub-desc">
+                  Đội HCMUS_TheFangs giành Quán quân cả hai bảng đấu của cuộc thi NeurIPS 2025 về thị giác máy tính bền bỉ và hành vi thích nghi trong tác vụ foraging sinh học.
+                </p>
+              </div>
+              <div class="pub-links">
+                <a class="pub-link" href="https://mouse-vs-ai.github.io/" target="_blank" rel="noopener">Trang cuộc thi ↗</a>
+                <a class="pub-link" href="https://arxiv.org/abs/2602.00982" target="_blank" rel="noopener">arXiv:2602.00982 ↗</a>
+                <button class="pub-btn-showcase" onclick="openPaperModal('award')">Xem trước ↗</button>
+              </div>
             </div>
           </article>
 
           <!-- COMPOSE -->
           <article class="pub-card">
-            <div class="pub-meta">
-              <span class="pub-tag">NeurIPS 2026 · Main Track</span>
-              <span class="pub-year">2026</span>
+            <div class="pub-thumb-wrap" onclick="openPaperModal('compose')" role="button" tabindex="0" aria-label="Xem trưng bày trang đầu bài báo COMPOSE">
+              <img class="pub-thumb-img" src="assets/papers/paper-compose.png" alt="Trang đầu bài báo COMPOSE" loading="lazy">
+              <div class="pub-thumb-overlay"><span class="pub-thumb-btn-text">Trưng bày trang đầu ↗</span></div>
             </div>
-            <h3 class="pub-title">Unlocking Compositional Generalization in Continual Few-Shot Learning</h3>
-            <p class="pub-desc">
-              Thúc đẩy khả năng tổng quát hoá cấu thành trong học liên tục với số lượng mẫu ít, giúp mô hình tích luỹ khái niệm mới mà không làm suy giảm hiệu năng trên các tổ hợp tri thức cũ.
-            </p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://arxiv.org/abs/2605.11710" target="_blank" rel="noopener">arXiv:2605.11710 ↗</a>
+            <div class="pub-card-content">
+              <div>
+                <div class="pub-meta">
+                  <span class="pub-tag">NeurIPS 2026 · Main Track</span>
+                  <span class="pub-year">2026</span>
+                </div>
+                <h3 class="pub-title">Unlocking Compositional Generalization in Continual Few-Shot Learning</h3>
+                <p class="pub-desc">
+                  Thúc đẩy khả năng tổng quát hoá cấu thành trong học liên tục với số lượng mẫu ít, giúp mô hình tích luỹ khái niệm mới mà không làm suy giảm hiệu năng trên các tổ hợp tri thức cũ.
+                </p>
+              </div>
+              <div class="pub-links">
+                <a class="pub-link" href="https://arxiv.org/abs/2605.11710" target="_blank" rel="noopener">arXiv:2605.11710 ↗</a>
+                <button class="pub-btn-showcase" onclick="openPaperModal('compose')">Xem trước ↗</button>
+              </div>
             </div>
           </article>
 
           <!-- MIST -->
           <article class="pub-card">
-            <div class="pub-meta">
-              <span class="pub-tag">NeurIPS 2026 · Main Track</span>
-              <span class="pub-year">2026</span>
+            <div class="pub-thumb-wrap" onclick="openPaperModal('mist')" role="button" tabindex="0" aria-label="Xem trưng bày trang đầu bài báo MIST">
+              <img class="pub-thumb-img" src="assets/papers/paper-mist.png" alt="Trang đầu bài báo MIST" loading="lazy">
+              <div class="pub-thumb-overlay"><span class="pub-thumb-btn-text">Trưng bày trang đầu ↗</span></div>
             </div>
-            <h3 class="pub-title">MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound</h3>
-            <p class="pub-desc">
-              Cây quyết định học dạng luồng trực tuyến có độ tin cậy được chứng minh bằng cận McDiarmid, giải quyết bài toán gia tăng lớp dữ liệu thời gian thực.
-            </p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://arxiv.org/abs/2605.11617" target="_blank" rel="noopener">arXiv:2605.11617 ↗</a>
+            <div class="pub-card-content">
+              <div>
+                <div class="pub-meta">
+                  <span class="pub-tag">NeurIPS 2026 · Main Track</span>
+                  <span class="pub-year">2026</span>
+                </div>
+                <h3 class="pub-title">MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound</h3>
+                <p class="pub-desc">
+                  Cây quyết định học dạng luồng trực tuyến có độ tin cậy được chứng minh bằng cận McDiarmid, giải quyết bài toán gia tăng lớp dữ liệu thời gian thực.
+                </p>
+              </div>
+              <div class="pub-links">
+                <a class="pub-link" href="https://arxiv.org/abs/2605.11617" target="_blank" rel="noopener">arXiv:2605.11617 ↗</a>
+                <button class="pub-btn-showcase" onclick="openPaperModal('mist')">Xem trước ↗</button>
+              </div>
             </div>
           </article>
 
           <!-- Mouse vs AI Benchmark -->
           <article class="pub-card">
-            <div class="pub-meta">
-              <span class="pub-tag">NeurIPS 2026 · Datasets &amp; Benchmarks</span>
-              <span class="pub-year">2026</span>
+            <div class="pub-thumb-wrap" onclick="openPaperModal('mouse-benchmark')" role="button" tabindex="0" aria-label="Xem trưng bày trang đầu bài báo Benchmark Mouse vs AI">
+              <img class="pub-thumb-img" src="assets/papers/paper-mouse-benchmark.png" alt="Trang đầu bài báo Benchmark Mouse vs AI" loading="lazy">
+              <div class="pub-thumb-overlay"><span class="pub-thumb-btn-text">Trưng bày trang đầu ↗</span></div>
             </div>
-            <h3 class="pub-title">Visual Robustness and Neural Alignment in a Shared Foraging Task: The Mouse vs. AI Benchmark</h3>
-            <p class="pub-desc">
-              Bộ chuẩn đối sánh quy mô lớn đánh giá độ bền bỉ thị giác và sự tương đồng biểu diễn nơ-ron giữa chuột sinh học và các kiến trúc mạng nơ-ron nhân tạo trong tác vụ foraging.
-            </p>
-            <div class="pub-links">
-              <span class="pub-link" style="color:var(--muted);cursor:default;">NeurIPS 2026 D&amp;B Track</span>
+            <div class="pub-card-content">
+              <div>
+                <div class="pub-meta">
+                  <span class="pub-tag">NeurIPS 2026 · Datasets &amp; Benchmarks</span>
+                  <span class="pub-year">2026</span>
+                </div>
+                <h3 class="pub-title">Visual Robustness and Neural Alignment in a Shared Foraging Task: The Mouse vs. AI Benchmark</h3>
+                <p class="pub-desc">
+                  Bộ chuẩn đối sánh quy mô lớn đánh giá độ bền bỉ thị giác và sự tương đồng biểu diễn nơ-ron giữa chuột sinh học và các kiến trúc mạng nơ-ron nhân tạo trong tác vụ foraging.
+                </p>
+              </div>
+              <div class="pub-links">
+                <a class="pub-link" href="https://arxiv.org/abs/2602.00982" target="_blank" rel="noopener">arXiv:2602.00982 ↗</a>
+                <button class="pub-btn-showcase" onclick="openPaperModal('mouse-benchmark')">Xem trước ↗</button>
+              </div>
             </div>
           </article>
         </div>
@@ -1848,13 +2155,13 @@
     <div class="shell">
       <section class="apply-banner" id="apply">
         <div>
-          <span class="eyebrow" style="color:#1d4d2b;">08 / BẮT ĐẦU HÀNH TRÌNH</span>
+          <span class="eyebrow">08 / BẮT ĐẦU HÀNH TRÌNH</span>
           <h2>Tham gia nghiên cứu cùng Lab</h2>
           <p>
             Gửi đơn đăng ký trực tuyến kèm CV học thuật để bắt đầu quá trình trao đổi cùng ban tuyển chọn của lab.
           </p>
           <div style="margin-top:20px;">
-            <span class="badge" style="background:#ffffff; color:#1e5a3a; font-weight:800;">
+            <span class="badge">
               Hạn nhận đơn: Đợt tuyển đang mở · Số lượng: 05 thành viên
             </span>
           </div>
@@ -1874,6 +2181,36 @@
           </div>
         </div>
       </section>
+    </div>
+
+    <!-- Academic Paper Showcase Lightbox Modal -->
+    <div class="modal-overlay" id="paperModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <div class="modal-card">
+        <button class="modal-close" onclick="closePaperModal()" aria-label="Đóng modal">&times;</button>
+        <div class="modal-preview-col">
+          <div class="modal-img-frame">
+            <img id="modalImg" src="" alt="Trang đầu bài báo">
+          </div>
+        </div>
+        <div class="modal-info-col">
+          <div>
+            <div class="modal-meta">
+              <span class="pub-tag" id="modalTag">NeurIPS 2026</span>
+              <span class="pub-year" id="modalYear">2026</span>
+            </div>
+            <h3 class="modal-title" id="modalTitle">Tiêu đề bài báo</h3>
+            <div class="modal-track" id="modalTrack">Hạng mục công bố</div>
+            <p class="modal-desc" id="modalDesc">Tóm tắt nội dung khoa học và đóng góp chính của công trình.</p>
+          </div>
+          <div>
+            <div class="modal-actions">
+              <a class="pill" id="modalArxivBtn" href="#" target="_blank" rel="noopener">Đọc trên arXiv ↗</a>
+              <button class="pill pill-secondary" id="modalBibtexBtn" onclick="copyModalBibtex()">Sao chép BibTeX</button>
+            </div>
+            <div class="modal-copy-status" id="modalCopyStatus" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -1927,7 +2264,7 @@
     // Theme Toggle Logic
     const themeToggleBtn = document.getElementById('themeToggle');
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+    const savedTheme = localStorage.getItem('theme') || 'light';
 
     if (savedTheme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -2010,6 +2347,159 @@
         quizResultText.innerHTML = advice;
       });
     }
+
+    // Academic Paper Showcase Lightbox Logic
+    const papersData = {
+      'disca': {
+        title: 'Training-Free Cultural Alignment of Large Language Models via Persona Disagreement',
+        tag: 'NeurIPS 2026',
+        year: '2026',
+        track: 'Main Conference Track · Research Paper',
+        desc: 'Căn chỉnh mô hình ngôn ngữ lớn (LLM) theo đa dạng góc nhìn văn hoá không cần can thiệp trọng số (training-free), khai thác sự bất đồng có cấu trúc giữa các nhân vật (persona).',
+        img: 'assets/papers/paper-disca.png',
+        arxivUrl: 'https://arxiv.org/abs/2605.10843',
+        bibtex: `@inproceedings{disca2026neurips,\n  title={Training-Free Cultural Alignment of Large Language Models via Persona Disagreement},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  year={2026}\n}`
+      },
+      'skypart': {
+        title: 'Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery',
+        tag: 'NeurIPS 2026',
+        year: '2026',
+        track: 'Main Conference Track · Research Paper',
+        desc: 'Định vị địa lý chéo góc nhìn (mặt đất và vệ tinh) bền bỉ trước biến thiên thời tiết cực đoan bằng cơ chế khám phá bộ phận ngữ nghĩa dựa trên nguyên mẫu (prototype).',
+        img: 'assets/papers/paper-skypart.png',
+        arxivUrl: 'https://arxiv.org/abs/2605.11654',
+        bibtex: `@inproceedings{skypart2026neurips,\n  title={Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  year={2026}\n}`
+      },
+      'payoff': {
+        title: 'Payoff Scaling Shapes Cooperation in LLM Agents Across Languages',
+        tag: 'Royal Society Interface Focus',
+        year: '2026',
+        track: 'Journal Article · The Royal Society',
+        desc: 'Nghiên cứu thực nghiệm về sự tiến hoá và hợp tác giữa các tác tử mô hình ngôn ngữ lớn dưới các tỉ lệ ma trận chi trả và sự khác biệt ngôn ngữ trong lý thuyết trò chơi.',
+        img: 'assets/papers/paper-payoff.png',
+        arxivUrl: 'https://arxiv.org/abs/2601.19082',
+        bibtex: `@article{payoffscaling2026interfacefocus,\n  title={Payoff Scaling Shapes Cooperation in LLM Agents Across Languages},\n  journal={Interface Focus, The Royal Society},\n  year={2026}\n}`
+      },
+      'award': {
+        title: 'The Mouse vs. AI Robust Foraging Competition (1st Place, Cả hai bảng đấu)',
+        tag: 'NeurIPS 2025',
+        year: '2025',
+        track: 'Competition Track · Quán quân Toàn cầu',
+        desc: 'Đội HCMUS_TheFangs giành Quán quân cả hai bảng đấu của cuộc thi NeurIPS 2025 về thị giác máy tính bền bỉ và hành vi thích nghi trong tác vụ foraging sinh học.',
+        img: 'assets/papers/award-mouse-vs-ai.png',
+        arxivUrl: 'https://mouse-vs-ai.github.io/',
+        bibtex: `@misc{mousevsai2025winner,\n  title={1st Place Winner: The Mouse vs. AI Robust Foraging Competition},\n  howpublished={NeurIPS 2025 Competition Track},\n  url={https://mouse-vs-ai.github.io/},\n  year={2025}\n}`
+      },
+      'compose': {
+        title: 'Unlocking Compositional Generalization in Continual Few-Shot Learning',
+        tag: 'NeurIPS 2026',
+        year: '2026',
+        track: 'Main Conference Track · Research Paper',
+        desc: 'Thúc đẩy khả năng tổng quát hoá cấu thành trong học liên tục với số lượng mẫu ít, giúp mô hình tích luỹ khái niệm mới mà không làm suy giảm hiệu năng trên các tổ hợp tri thức cũ.',
+        img: 'assets/papers/paper-compose.png',
+        arxivUrl: 'https://arxiv.org/abs/2605.11710',
+        bibtex: `@inproceedings{compose2026neurips,\n  title={Unlocking Compositional Generalization in Continual Few-Shot Learning},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  year={2026}\n}`
+      },
+      'mist': {
+        title: 'MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound',
+        tag: 'NeurIPS 2026',
+        year: '2026',
+        track: 'Main Conference Track · Research Paper',
+        desc: 'Cây quyết định học dạng luồng trực tuyến có độ tin cậy được chứng minh bằng cận McDiarmid, giải quyết bài toán gia tăng lớp dữ liệu thời gian thực.',
+        img: 'assets/papers/paper-mist.png',
+        arxivUrl: 'https://arxiv.org/abs/2605.11617',
+        bibtex: `@inproceedings{mist2026neurips,\n  title={MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  year={2026}\n}`
+      },
+      'mouse-benchmark': {
+        title: 'Visual Robustness and Neural Alignment in a Shared Foraging Task: The Mouse vs. AI Benchmark',
+        tag: 'NeurIPS 2026',
+        year: '2026',
+        track: 'Datasets & Benchmarks Track · Research Paper',
+        desc: 'Bộ chuẩn đối sánh quy mô lớn đánh giá độ bền bỉ thị giác và sự tương đồng biểu diễn nơ-ron giữa chuột sinh học và các kiến trúc mạng nơ-ron nhân tạo trong tác vụ foraging.',
+        img: 'assets/papers/paper-mouse-benchmark.png',
+        arxivUrl: 'https://arxiv.org/abs/2602.00982',
+        bibtex: `@inproceedings{mousevsai2026benchmark,\n  title={Visual Robustness and Neural Alignment in a Shared Foraging Task: The Mouse vs. AI Benchmark},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track},\n  year={2026}\n}`
+      }
+    };
+
+    let activeBibtex = '';
+    const paperModal = document.getElementById('paperModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalTag = document.getElementById('modalTag');
+    const modalYear = document.getElementById('modalYear');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalTrack = document.getElementById('modalTrack');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalArxivBtn = document.getElementById('modalArxivBtn');
+    const modalCopyStatus = document.getElementById('modalCopyStatus');
+
+    function openPaperModal(id) {
+      const data = papersData[id];
+      if (!data) return;
+
+      modalImg.src = data.img;
+      modalImg.alt = data.title;
+      modalTag.textContent = data.tag;
+      modalYear.textContent = data.year;
+      modalTitle.textContent = data.title;
+      modalTrack.textContent = data.track;
+      modalDesc.textContent = data.desc;
+      modalArxivBtn.href = data.arxivUrl;
+      activeBibtex = data.bibtex;
+      modalCopyStatus.textContent = '';
+
+      if (id === 'award') {
+        modalArxivBtn.textContent = 'Trang cuộc thi ↗';
+      } else {
+        modalArxivBtn.textContent = 'Đọc trên arXiv ↗';
+      }
+
+      paperModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      paperModal.focus();
+    }
+
+    function closePaperModal() {
+      paperModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function copyModalBibtex() {
+      if (!activeBibtex) return;
+      navigator.clipboard.writeText(activeBibtex).then(() => {
+        modalCopyStatus.textContent = '✓ Đã sao chép trích dẫn BibTeX vào bộ nhớ tạm';
+        setTimeout(() => {
+          modalCopyStatus.textContent = '';
+        }, 3000);
+      }).catch(() => {
+        modalCopyStatus.textContent = 'Không thể sao chép tự động. Vui lòng thử lại.';
+      });
+    }
+
+    // Modal background click & keyboard listeners
+    if (paperModal) {
+      paperModal.addEventListener('click', (e) => {
+        if (e.target === paperModal) {
+          closePaperModal();
+        }
+      });
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && paperModal.classList.contains('active')) {
+        closePaperModal();
+      }
+    });
+
+    // Keyboard accessibility for thumbnails
+    document.querySelectorAll('.pub-thumb-wrap').forEach(wrap => {
+      wrap.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          wrap.click();
+        }
+      });
+    });
   </script>
 </body>
 </html>
