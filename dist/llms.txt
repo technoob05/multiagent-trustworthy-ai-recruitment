@@ -35,6 +35,6 @@
 ## Official Links & Contacts
 
 - **Recruitment Landing Page:** https://technoob05.github.io/multiagent-trustworthy-ai-recruitment/
-- **Application Form:** https://docs.google.com/forms/d/1w_Xi0H-PpbrHX8kz4wdaWaZwPtg9k6QitK-RzBbMNVY/edit
+- **Application Form:** https://docs.google.com/forms/d/1w_Xi0H-PpbrHX8kz4wdaWaZwPtg9k6QitK-RzBbMNVY/viewform
 - **Primary Contact Email:** 23122041@student.hcmus.edu.vn
 - **Physical Address:** 227 Nguyen Van Cu Street, Ward 4, District 5, Ho Chi Minh City, Vietnam
