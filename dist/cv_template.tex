@@ -1,0 +1,104 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese,english]{babel}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Color definitions
+\definecolor{primary}{RGB}{30, 90, 58}
+\definecolor{darkink}{RGB}{13, 38, 39}
+\definecolor{linegray}{RGB}{200, 210, 202}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    urlcolor=primary,
+    pdftitle={Academic CV Template - Multi-Agent and Trustworthy AI Lab},
+    pdfauthor={Student Candidate}
+}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{primary}\raggedright}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% Custom itemize
+\setlist[itemize]{leftmargin=1.5em, itemsep=1.5pt, topsep=2pt, parsep=0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% <!-- vale AntiSlop.LongSentence = NO -->
+% Header
+\begin{center}
+    {\LARGE \textbf{NGUYEN VAN A}}\\[4pt]
+    \small
+    Khoa Cong nghe Thong tin, Truong Dai hoc Khoa hoc Tu nhien, DHQG-HCM.\\
+    Email: \href{mailto:23122xxx@student.hcmus.edu.vn}{23122xxx@student.hcmus.edu.vn}. \quad$|$\quad
+    Phone: (+84) 9xx-xxx-xxx. \quad$|$\quad
+    GitHub: \href{https://github.com/username}{github.com/username}. \quad$|$\quad
+    LinkedIn: \href{https://linkedin.com/in/username}{linkedin.com/in/username}.
+\end{center}
+
+\vspace{-4pt}
+
+% Section 1: Education
+\section*{EDUCATION}
+\textbf{University of Science, VNU-HCM.} \hfill 2024 -- Present.\\
+\textit{Bachelor of Science in Computer Science.} \hfill \textbf{GPA: 8.5 / 10.0 (Top 5\%).}\\
+\textbf{Relevant Coursework}:
+\begin{itemize}
+    \item \textbf{Mathematics}: Linear Algebra (9.2), Probability and Statistics (9.0), Calculus (8.8), Discrete Math (8.5).
+    \item \textbf{Computer Science}: Data Structures (8.7), Object-Oriented Programming (8.5), Machine Learning (9.0).
+\end{itemize}
+
+% Section 2: Research Interests
+\section*{RESEARCH INTERESTS}
+\begin{itemize}
+    \item \textbf{Multi-Agent Systems and Game-Theoretic AI}: Strategic decision-making, cooperation mechanisms, and LLM societies.
+    \item \textbf{Trustworthy and Culture-Aware AI}: Continual learning, foundation model safety, and culture-aware alignment.
+\end{itemize}
+
+% Section 3: Technical Projects
+\section*{SELECTED PROJECTS}
+
+\textbf{Market Trend Forecasting with LSTM and Attention Baselines.} \hfill 10/2025 -- 12/2025.\\
+\textit{Course Project -- Introduction to Machine Learning (Grade: 9.5/10).} \hfill \href{https://github.com/username/project-lstm}{[GitHub Repository]}
+\begin{itemize}
+    \item Formulated a sequence-to-sequence prediction problem over 5 years of daily financial time-series data.
+    \item Implemented linear baseline, standard LSTM, and single-head attention mechanisms from scratch using PyTorch.
+    \item Enforced strict train/validation/test chronological splits to eliminate future information leakage. Observed a 14\% MAE reduction over the moving average baseline.
+    \item Identified failure cases during high-volatility shocks and proposed rolling window z-score re-normalization.
+\end{itemize}
+
+\vspace{3pt}
+\textbf{Reliable Vision Classification Under Controlled Image Perturbations.} \hfill 08/2025 -- 09/2025.\\
+\textit{Independent Exploration Project.} \hfill \href{https://github.com/username/reliable-vision-eval}{[GitHub Repository]}
+\begin{itemize}
+    \item Evaluated ResNet-50 and MobileNetV2 under simulated distribution shifts (Gaussian noise, contrast reduction, blur).
+    \item Measured performance drops using top-1 accuracy and expected calibration error (ECE). Found MobileNetV2 suffered 2.1x higher calibration drift under contrast shifts.
+    \item Implemented test-time augmentation (TTA) pipeline that recovered 6.4\% top-1 accuracy without model retraining.
+\end{itemize}
+
+% Section 4: Technical Skills
+\section*{TECHNICAL SKILLS}
+\begin{itemize}
+    \item \textbf{Languages}: Python (proficient), C++, SQL, Bash.
+    \item \textbf{Frameworks and Libraries}: PyTorch, NumPy, Pandas, Scikit-Learn, OpenCV, Matplotlib.
+    \item \textbf{Developer Tools and Environment}: Git, GitHub, Linux/Ubuntu, LaTeX (Overleaf), Google Colab, VS Code.
+    \item \textbf{English Proficiency}: Fluent in reading and synthesizing scientific papers (IELTS 7.0 / TOEIC 850 equivalent).
+\end{itemize}
+
+% Section 5: Honors & Activities
+\section*{HONORS AND ACTIVITIES}
+\begin{itemize}
+    \item \textbf{HCMUS Academic Encouragement Scholarship}: Semester 1, 2025--2026.
+    \item \textbf{Member}, HCMUS AI and Algorithm Club: Participated in weekly paper reading seminars.
+\end{itemize}
+
+\end{document}
