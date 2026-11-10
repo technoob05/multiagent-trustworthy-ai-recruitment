@@ -5,12 +5,12 @@
 ## About the Laboratory
 
 - **Institution:** Faculty of Information Technology, University of Science, Vietnam National University Ho Chi Minh City (FIT, HCMUS).
-- **Head of Lab:** Prof. Long Tran-Thanh (Professor of AI, University of Warwick, UK, and Adjunct Professor at FIT, HCMUS).
+- **Head of Lab:** Prof. Long Tran-Thanh (Professor, University of Warwick, UK).
 - **Faculty Mentors:** Assoc. Prof. Nguyen Van Vu, Dr. Chau Thanh Duc, Dr. Le Trung Hoang.
-- **Student Team:** Senior undergraduate research team at FIT, HCMUS.
-- **Current Opening:** Recruiting 5 passionate undergraduate/graduate students to join the current cohort of 5 student researchers.
-- **Work Mode:** Online-first, flexible scheduling around academic courses, weekly 1-on-1 and lab-wide sync meetings.
-- **Compute Resources:** GPU compute cluster access supported for verified research projects.
+- **Student Team:** 5 undergraduate researchers at FIT, HCMUS.
+- **Current Opening:** Recruiting 5 undergraduate students (year 1 to year 4).
+- **Work Mode:** Mostly online, scheduled around classes, with a weekly lab meeting and a weekly 1-on-1 with a mentor.
+- **Compute Resources:** Projects that need GPUs get access to the lab's GPU servers.
 
 ## Core Research Pillars
 
@@ -26,25 +26,25 @@
 - **The Mouse vs. AI Robust Foraging Competition** (1st Place Champion across both tracks, NeurIPS 2025 Competition Track; Team HCMUS_TheFangs, technical report [arXiv:2602.00982](https://arxiv.org/abs/2602.00982), competition site: [https://mouse-vs-ai.github.io/](https://mouse-vs-ai.github.io/)).
 - **Unlocking Compositional Generalization in Continual Few-Shot Learning** (NeurIPS 2026 Main Track, [arXiv:2605.11710](https://arxiv.org/abs/2605.11710)).
 - **MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound** (NeurIPS 2026 Main Track, [arXiv:2605.11617](https://arxiv.org/abs/2605.11617)).
-- **Visual Robustness and Neural Alignment in a Shared Foraging Task: The Mouse vs. AI Benchmark** (NeurIPS 2026 Datasets and Benchmarks Track).
+- **Visual Robustness and Neural Alignment in a Shared Foraging Task: The Mouse vs. AI Benchmark** (NeurIPS 2026 Evaluations and Datasets Track).
 
 ## What You Will Gain
 
-- Rigorous 1-on-1 research mentorship from seasoned researchers with proven A* conference track records.
-- Access to high-performance GPU clusters for training and running empirical evaluations.
-- First-hand training in scientific inquiry, LaTeX manuscript preparation, and international peer-review rebuttal.
-- Stepping stone toward top-tier fully funded PhD scholarships (US, UK, Europe, Australia, Singapore) and elite industrial AI R&D labs.
+- A weekly 1-on-1 with a mentor who has published at venues such as NeurIPS.
+- GPU server access for projects that need it.
+- Hands-on practice in the full research cycle: question, method, experiments, LaTeX writing and peer review.
+- Feedback on applications for graduate study or R&D jobs. The lab does not promise papers, authorship, scholarships, PhD places or jobs. Authorship follows real contribution.
 
 ## 4-Round Recruitment Process
 
-1. **Round 1 - Application & Research CV:** Submit academic background, coursework, programming experience, and research statement via the official form. Pre-existing publications are NOT required.
-2. **Round 2 - Basic AI & Machine Learning Assessment:** 30-minute online assessment covering core ML concepts, baseline models, metric selection, and data leakage. Open-book and AI tools are permitted with proper attribution.
-3. **Round 3 - Structured Research & Culture Interview:** 35-45 minute conversational interview about course projects, problem-solving mindset, collaborative dynamics, and research goals.
-4. **Round 4 - Mini Research Proposal:** Maximum 2-page PDF proposal on a given real-world question (~3 hours effort within a 5-day window). No model training or empirical results required. The focus is on problem formulation and sound experimental design. The round concludes with a 10-minute presentation and a 10-minute question-and-answer session.
+1. **Round 1: Application & Research CV:** Submit academic background, coursework, programming experience, and research statement via the official form. No prior publication is required.
+2. **Round 2: Basic AI & Machine Learning Assessment:** 30-minute online assessment covering core ML concepts, baseline models, metric selection, and data leakage. Open-book and AI tools are permitted with proper attribution.
+3. **Round 3: Structured Research & Culture Interview:** 35 to 45 minute conversational interview about course projects, problem-solving mindset, collaborative dynamics, and research goals.
+4. **Round 4: Mini Research Proposal:** Maximum 2-page PDF proposal on a given real-world question (about 3 hours of work, due within 5 days). No model training or empirical results required. The focus is on problem formulation and sound experimental design. The round concludes with a 10-minute presentation and a 10-minute question-and-answer session.
 
 ## Links and Contacts
 
 - [Recruitment Landing Page](https://technoob05.github.io/multiagent-trustworthy-ai-recruitment/): Official portal.
-- [Application Submission Form](https://docs.google.com/forms/d/1w_Xi0H-PpbrHX8kz4wdaWaZwPtg9k6QitK-RzBbMNVY/viewform): Online form.
+- [Application Submission Form](https://docs.google.com/forms/d/e/1FAIpQLScOVADXpvh0UvCEFPPRIoqHEkoGJJdnUPBJBmls7jbmwY5z0g/viewform): Online form.
 - Contact email: 23122041@student.hcmus.edu.vn.
 - Faculty address: 227 Nguyen Van Cu, District 5, Ho Chi Minh City.
