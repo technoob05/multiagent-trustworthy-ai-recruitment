@@ -12,9 +12,9 @@
   <meta property="og:url" content="https://technoob05.github.io/multiagent-trustworthy-ai-recruitment/">
   <meta property="og:title" content="Multi-Agent & Trustworthy AI Lab | Tuyển thành viên nghiên cứu AI">
   <meta property="og:description" content="Phòng thí nghiệm AI đa tác tử và Tin cậy (FIT, HCMUS) tuyển 5 thành viên sinh viên. Làm việc online, có mentor kèm 1-1.">
-  <meta property="og:image" content="https://technoob05.github.io/multiagent-trustworthy-ai-recruitment/visual.png">
-  <meta property="og:image:width" content="1254">
-  <meta property="og:image:height" content="1254">
+  <meta property="og:image" content="https://technoob05.github.io/multiagent-trustworthy-ai-recruitment/cover-en.jpg">
+  <meta property="og:image:width" content="1080">
+  <meta property="og:image:height" content="1350">
   <meta property="og:locale" content="vi_VN">
 
   <!-- Twitter -->
@@ -22,7 +22,7 @@
   <meta name="twitter:url" content="https://technoob05.github.io/multiagent-trustworthy-ai-recruitment/">
   <meta name="twitter:title" content="Multi-Agent & Trustworthy AI Lab | Tuyển thành viên nghiên cứu AI">
   <meta name="twitter:description" content="Phòng thí nghiệm AI đa tác tử và Tin cậy (FIT, HCMUS) tuyển 5 thành viên sinh viên tham gia nghiên cứu AI.">
-  <meta name="twitter:image" content="https://technoob05.github.io/multiagent-trustworthy-ai-recruitment/visual.png">
+  <meta name="twitter:image" content="https://technoob05.github.io/multiagent-trustworthy-ai-recruitment/cover-en.jpg">
 
   <title>Multi-Agent & Trustworthy AI Lab | Tuyển thành viên nghiên cứu AI · FIT, HCMUS</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -36,7 +36,7 @@
   <!-- Fonts with full Vietnamese glyph coverage (precomposed diacritics such as ế, ầ, ổ) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=VT323&family=Press+Start+2P&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -1524,6 +1524,79 @@
     @media (max-width: 380px) {
       .nav-actions .pill { display: none; }
     }
+
+    /* Pixel layer: pixel headings (VT323 covers Vietnamese), hard borders and block shadows, readable sans body */
+    :root {
+      --bg: #f5f0e3; --surface: #fffaf0; --surface-2: #ece5d3; --surface-card: #fffaf0;
+      --ink: #111827; --ink-secondary: #374151; --muted: #5b6472; --line: #111827; --line-subtle: #d6cdb5;
+      --primary: #111827; --primary-hover: #1f2937; --badge-bg: #fffaf0; --badge-text: #111827; --hero-sub: #374151;
+      --px-acc: #c27400; --px-acc-bg: #ffbf3c; --px-acc2: #137a5e; --px-shadow: #111827; --px-grid: rgba(17,24,39,.06);
+      --radius: 0; --radius-sm: 0; --radius-pill: 0;
+      --font-px: "VT323", ui-monospace, monospace; --font-px-latin: "Press Start 2P", ui-monospace, monospace;
+    }
+    [data-theme="dark"] {
+      --bg: #0b1020; --surface: #121a33; --surface-2: #0f1630; --surface-card: #121a33;
+      --ink: #f3efe4; --ink-secondary: #c9d3e3; --muted: #8fa3c0; --line: #3a4a7a; --line-subtle: #1f2a4d;
+      --primary: #ffbf3c; --primary-hover: #ffd06b; --badge-bg: #121a33; --badge-text: #f3efe4; --hero-sub: #c9d3e3;
+      --px-acc: #ffbf3c; --px-acc-bg: #ffbf3c; --px-acc2: #5ee6c0; --px-shadow: #050812; --px-grid: rgba(143,163,192,.07);
+    }
+    body {
+      font-family: "Be Vietnam Pro", system-ui, sans-serif; font-size: 16.5px; line-height: 1.65; background-color: var(--bg);
+      background-image: linear-gradient(var(--px-grid) 2px, transparent 2px), linear-gradient(90deg, var(--px-grid) 2px, transparent 2px);
+      background-size: 24px 24px;
+    }
+    ::selection { background: var(--px-acc-bg); color: #111827; }
+    h1, h2, h3, h4, .brand-title, .strip-item strong, .person-name, .pub-title, .modal-title, .apply-banner h2, .quiz-result-title, .workflow-title, .ach-head {
+      font-family: var(--font-px); font-weight: 400; letter-spacing: 0 !important;
+    }
+    .hero h1 { font-size: clamp(54px, 7vw, 96px); line-height: .95; }
+    .hero h1 em { font-family: var(--font-px); font-style: normal; color: var(--px-acc); text-shadow: 4px 4px 0 var(--px-shadow); }
+    .section h2 { font-size: clamp(40px, 4.6vw, 60px); line-height: 1; }
+    .research-card h3, .benefit-item h3, .step-card h3, .ach-head, .workflow-title { font-size: 30px; line-height: 1.05; }
+    .pub-title { font-size: 27px; line-height: 1.05; }
+    .person-name { font-size: 24px; }
+    .strip-item strong { font-size: 34px; }
+    .brand-title { font-size: 22px; line-height: 1; }
+    .eyebrow, .wf-num, .step-badge, .step-meta, .pub-tag, .badge, .pub-year, .research-tags span, .navlinks a, .quiz-btn, .faq-container summary {
+      font-family: var(--font-px); letter-spacing: .04em;
+    }
+    .eyebrow { font-size: 20px; color: var(--px-acc2); }
+    .eyebrow::before { border-radius: 0; background: var(--px-acc2); }
+    .navlinks a { font-size: 21px; font-weight: 400; }
+    .badge, .pub-tag, .research-tags span { font-size: 20px; border: 2px solid var(--line); border-radius: 0; background: var(--surface); }
+    .card-num, .benefit-icon { font-family: var(--font-px-latin); font-size: 11px; letter-spacing: 0; }
+    .benefit-icon { background: var(--px-acc-bg); color: #111827; border: 2px solid var(--px-shadow); border-radius: 0; }
+    .wf-num { font-size: 18px; }
+    .pill, .pill-secondary, .pill-accent, .copy-btn, .pub-btn-showcase {
+      font-family: var(--font-px); font-size: 26px; font-weight: 400; border: 3px solid var(--px-shadow); border-radius: 0;
+      box-shadow: 4px 4px 0 var(--px-shadow); transition: transform .08s steps(2), box-shadow .08s steps(2);
+    }
+    .pill:hover, .pill-secondary:hover, .pill-accent:hover, .copy-btn:hover, .pub-btn-showcase:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--px-shadow); }
+    .pill:active, .pill-secondary:active, .pill-accent:active, .copy-btn:active, .pub-btn-showcase:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--px-shadow); }
+    .pill-accent, [data-theme="dark"] .pill-accent { background: var(--px-acc-bg); color: #111827; }
+    [data-theme="dark"] .pill, [data-theme="dark"] .pill-secondary, [data-theme="dark"] .apply-actions .pill { border-color: var(--ink); }
+    .research-card, .people-card, .step-card, .benefit-item, .quiz-card, .workflow-box, .cv-guide-box, .visual-card, .modal-card, .faq-container details, .apply-banner {
+      border: 3px solid var(--line); border-radius: 0; box-shadow: 6px 6px 0 var(--px-shadow); background: var(--surface);
+    }
+    [data-theme="dark"] .research-card, [data-theme="dark"] .step-card, [data-theme="dark"] .benefit-item, [data-theme="dark"] .quiz-card,
+    [data-theme="dark"] .workflow-box, [data-theme="dark"] .faq-container details, [data-theme="dark"] .apply-banner, [data-theme="dark"] .visual-card { border-color: var(--line); }
+    .research-card, .step-card, .benefit-item { transition: transform .1s steps(2), box-shadow .1s steps(2); }
+    .research-card:hover, .step-card:hover, .benefit-item:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--px-shadow); border-color: var(--line); }
+    .pub-card { border-bottom: 2px dashed var(--line-subtle); }
+    .pub-thumb-wrap { border: 3px solid var(--line); border-radius: 0; box-shadow: 4px 4px 0 var(--px-shadow); }
+    .section { border-top: 0; background-image: repeating-linear-gradient(90deg, var(--line-subtle) 0 12px, transparent 12px 18px); background-size: 100% 4px; background-repeat: no-repeat; }
+    .section-alt { background-color: var(--surface-2); }
+    header { border-bottom: 3px solid var(--line); background: var(--bg); }
+    .quiz-btn { border: 2px solid var(--line); border-radius: 0; font-size: 21px; line-height: 1.15; }
+    .quiz-btn.selected, .quiz-btn.selected:hover { background: var(--px-acc-bg); color: #111827; border-color: var(--px-shadow); }
+    .faq-container summary { font-size: 22px; }
+    .theme-toggle, .menu-toggle { border: 2px solid var(--line); border-radius: 0; box-shadow: 3px 3px 0 var(--px-shadow); }
+    .visual-card img { aspect-ratio: 4/5; object-fit: cover; image-rendering: auto; }
+    .apply-banner { background: var(--surface); }
+    .apply-banner h2 { font-size: clamp(40px, 4.6vw, 56px); }
+    :focus-visible { outline: 3px solid var(--px-acc-bg); outline-offset: 3px; }
+    @media (max-width: 640px) { .hero h1 { font-size: 52px; } .brand-title { font-size: 18px; } }
+    @media (prefers-reduced-motion: reduce) { .pill, .research-card, .step-card, .benefit-item { transition: none; } }
   </style>
 </head>
 <body>
@@ -1593,7 +1666,7 @@
 
         <div class="visual-wrapper">
           <div class="visual-card">
-            <img src="visual.png" width="1254" height="1254" alt="Mạng lưới tương tác của các tác tử AI và mô hình nền tảng" loading="eager">
+            <img src="cover-en.jpg" width="1080" height="1350" alt="Poster tuyển thành viên của lab theo phong cách pixel" loading="eager">
             <div class="visual-top-badge">FIT · HCMUS Research</div>
           </div>
           <div class="visual-floating-badge">
