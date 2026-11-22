@@ -22,17 +22,27 @@
 
 - **Training-Free Cultural Alignment of Large Language Models via Persona Disagreement** (NeurIPS 2026 Main Track, [arXiv:2605.10843](https://arxiv.org/abs/2605.10843)).
 - **Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery** (NeurIPS 2026 Main Track, [arXiv:2605.11654](https://arxiv.org/abs/2605.11654)).
-- **Payoff Scaling Shapes Cooperation in LLM Agents Across Languages** (Royal Society Interface Focus, [arXiv:2601.19082](https://arxiv.org/abs/2601.19082)).
+- **Payoff Scaling Shapes Cooperation in LLM Agents Across Languages** (Interface Focus, a Q1 journal of the Royal Society, [arXiv:2601.19082](https://arxiv.org/abs/2601.19082)).
 - **The Mouse vs. AI Robust Foraging Competition** (1st place in both tracks, NeurIPS 2025 Competition Track; Team HCMUS_TheFangs, technical report [arXiv:2602.00982](https://arxiv.org/abs/2602.00982), competition page: [NeurIPS 2025 Competition](https://neurips.cc/virtual/2025/competition/127735)).
 - **Unlocking Compositional Generalization in Continual Few-Shot Learning** (NeurIPS 2026 Main Track, [arXiv:2605.11710](https://arxiv.org/abs/2605.11710)).
 - **MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound** (NeurIPS 2026 Main Track, [arXiv:2605.11617](https://arxiv.org/abs/2605.11617)).
 - **Visual Robustness and Neural Alignment in a Shared Foraging Task: The Mouse vs. AI Benchmark** (NeurIPS 2026 Evaluations and Datasets Track).
+
+## Other International Results
+
+- 1st place: FSE-AIWare 2026 (ACM FSE), ICST 2026 Tool Competition, SemEval-2026 Task 11 (Subtask 1), Nakba-NLP at LREC 2026.
+- 2nd place: MMLoSo at IJCNLP-AACL 2025, DIG4BIO (TU Berlin).
+- Papers at FSE 2026 (CORE A*) and MSR 2026 (CORE A).
+- Kaggle silver and bronze medals.
+- Top 12 semifinalist, AI Thuc Chien 2026 (Vietnam Television, nearly 1,000 teams).
+- Olympic AI 2025 (Vietnam Association for Information Processing): national third prize, southern region second prize.
 
 ## What You Will Gain
 
 - A weekly 1-on-1 with a mentor who has published at venues such as NeurIPS.
 - GPU server access for projects that need it.
 - Practice in the full research cycle: question, method, experiments, LaTeX writing and peer review.
+- Connections with leading researchers and access to industry partners to work on real problems.
 - Feedback on applications for graduate study or R&D jobs. The lab does not promise papers, authorship, scholarships, PhD places or jobs. Authorship follows real contribution.
 
 ## 4-Round Recruitment Process

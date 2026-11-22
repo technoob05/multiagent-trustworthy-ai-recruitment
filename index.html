@@ -547,6 +547,11 @@
     }
 
     /* Research Workflow Box */
+    .ach-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 16px; }
+    .ach-head { font-size: 1rem; margin: 0 0 10px; color: var(--ink); }
+    .ach-list { margin: 0; padding-left: 18px; color: var(--ink-secondary); line-height: 1.6; }
+    .ach-list li { margin-bottom: 6px; }
+    @media (max-width: 860px) { .ach-grid { grid-template-columns: 1fr; gap: 20px; } }
     .workflow-box {
       margin-top: 40px;
       background: var(--surface-card);
@@ -1574,8 +1579,8 @@
 
           <div class="hero-badges-row">
             <span class="badge">5 Bài báo NeurIPS 2026</span>
-            <span class="badge">Royal Society Interface Focus</span>
-            <span class="badge">Giải nhất NeurIPS 2025 Competition</span>
+            <span class="badge">Tạp chí Q1 của Royal Society</span>
+            <span class="badge">5 lần hạng nhất quốc tế</span>
             <span class="badge">Làm việc online</span>
           </div>
 
@@ -1789,11 +1794,11 @@
       <section class="section" id="publications">
         <div class="section-head">
           <div>
-            <span class="eyebrow">03 / CÔNG BỐ KHOA HỌC &amp; THÀNH TÍCH</span>
-            <h2>Công bố khoa học tiêu biểu và Giải thưởng quốc tế.</h2>
+            <span class="eyebrow">03 / CÔNG BỐ VÀ THÀNH TÍCH</span>
+            <h2>Những gì nhóm sinh viên làm được trong 1 năm.</h2>
           </div>
           <p>
-            Các công trình nghiên cứu của lab được công bố tại các hội nghị chuyên ngành hàng đầu (NeurIPS) và tạp chí của Hội Hoàng gia Anh (The Royal Society).
+            5 bài được nhận tại NeurIPS 2026, hội nghị hàng đầu thế giới về trí tuệ nhân tạo và hạng 1 ngành AI trên Google Scholar. 1 bài ở Interface Focus, tạp chí Q1 của Royal Society. Và 5 lần hạng nhất ở các cuộc thi quốc tế.
           </p>
         </div>
 
@@ -1855,7 +1860,7 @@
             <div class="pub-card-content">
               <div>
                 <div class="pub-meta">
-                  <span class="pub-tag pub-tag-journal">Royal Society Interface Focus</span>
+                  <span class="pub-tag pub-tag-journal">Interface Focus · Q1 · Royal Society</span>
                   <span class="pub-year">2026</span>
                 </div>
                 <h3 class="pub-title">Payoff Scaling Shapes Cooperation in LLM Agents Across Languages</h3>
@@ -1967,6 +1972,38 @@
             </div>
           </article>
         </div>
+
+        <div class="workflow-box ach-box">
+          <div class="workflow-title">Thành tích khác trong 1 năm</div>
+          <div class="ach-grid">
+            <div>
+              <h3 class="ach-head">Hạng nhất quốc tế</h3>
+              <ul class="ach-list">
+                <li>NeurIPS 2025 Mouse vs. AI, giải nhất cả hai bảng</li>
+                <li>FSE-AIWare 2026 (ACM FSE)</li>
+                <li>ICST 2026 Tool Competition</li>
+                <li>SemEval-2026 Task 11 (Subtask 1)</li>
+                <li>Nakba-NLP tại LREC 2026</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="ach-head">Bài báo và giải khác</h3>
+              <ul class="ach-list">
+                <li>Bài ở FSE 2026 (hạng A*) và MSR 2026 (hạng A)</li>
+                <li>Giải nhì MMLoSo tại IJCNLP-AACL 2025</li>
+                <li>Giải nhì DIG4BIO của TU Berlin</li>
+                <li>Huy chương bạc và đồng trên Kaggle</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="ach-head">Trong nước</h3>
+              <ul class="ach-list">
+                <li>Top 12 bán kết AI Thực chiến 2026 trong gần 1.000 đội, đang thi tiếp và lên sóng VTV2</li>
+                <li>Olympic Trí tuệ nhân tạo 2025 (Hội Tin học Việt Nam): giải Ba toàn quốc, giải Nhì miền Nam</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
 
@@ -2011,8 +2048,8 @@
 
           <div class="benefit-item">
             <div class="benefit-icon">05</div>
-            <h3>Góp ý hồ sơ sau đại học</h3>
-            <p>Khi bạn apply học bổng sau đại học hoặc việc R&amp;D, lab góp ý hồ sơ. Thư giới thiệu do giảng viên quyết định dựa trên quá trình làm việc của bạn.</p>
+            <h3>Kết nối và hồ sơ sau đại học</h3>
+            <p>Kết nối với những người đầu ngành, tiếp cận doanh nghiệp để cùng giải bài toán thực tế. Khi bạn apply học bổng sau đại học hoặc việc R&amp;D, lab góp ý hồ sơ.</p>
           </div>
 
           <div class="benefit-item">
@@ -2565,7 +2602,7 @@
       },
       'payoff': {
         title: 'Payoff Scaling Shapes Cooperation in LLM Agents Across Languages',
-        tag: 'Royal Society Interface Focus',
+        tag: 'Interface Focus · Q1 · Royal Society',
         year: '2026',
         track: 'Journal Article · The Royal Society',
         desc: 'Mức thưởng phạt trong trò chơi và ngôn ngữ giao tiếp thay đổi mức hợp tác giữa các tác tử mô hình ngôn ngữ lớn ra sao.',
